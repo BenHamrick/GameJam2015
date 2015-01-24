@@ -12,9 +12,13 @@ public class CharacterController : MonoBehaviour {
 	public int health;
 	private int tempMoneyLoss;
 
+	public float force;
+
 	public float moneyPercentage;
 
 	private Vector2 aimDirection = Vector2.zero;
+
+	private Vector2 moveDirection;
 
 	public Transform weapon;
 
@@ -38,16 +42,31 @@ public class CharacterController : MonoBehaviour {
 	}
 
 	void Update(){
-	
-		aimDirection = InputManager.Devices [playerIndex].RightStick;
+		var inputDevice = (InputManager.Devices.Count > playerIndex) ? InputManager.Devices[playerIndex] : null;
 
+		if (inputDevice != null)
+		{
+
+			Aim();
+
+			Move();
+		}
+	}
+
+	private void Aim(){
+		aimDirection = InputManager.Devices [playerIndex].RightStick;
+		
 		RaycastHit2D hit = Physics2D.Raycast(weapon.position, aimDirection);
 		Debug.DrawLine (weapon.position, ((Vector3)weapon.position + (Vector3)aimDirection * 10000.0F) , Color.red);
+	}
 
-		print (aimDirection);
+	private void Move(){
+		moveDirection = InputManager.Devices [playerIndex].LeftStick;
 
+		RaycastHit2D hit = Physics2D.Raycast(weapon.position, aimDirection);
+		Debug.DrawLine (weapon.position, ((Vector3)weapon.position + (Vector3)moveDirection * 10000.0F) , Color.green);
 
-
+		rigidbody2D.velocity = moveDirection * force;
 	}
 
 	public void ResetCharacter(){
