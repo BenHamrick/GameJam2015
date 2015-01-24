@@ -8,6 +8,8 @@ public class EnemyController : MonoBehaviour {
     PolyNavAgent agent;
     CharacterController characterToHunt = null;
 
+    bool didGetHit;
+
     float health;
 
 	// Use this for initialization
@@ -28,13 +30,24 @@ public class EnemyController : MonoBehaviour {
             characterToHunt = findCharacterTochase();
             agent.SetDestination(characterToHunt.transform.position);
         }
-        
 	}
 
     public void Hit(int amount)
     {
-        print("hi!");
+        GetComponent<SpriteRenderer>().color = Color.grey;
+        if (!didGetHit)
+        {
+            didGetHit = true;
+            StartCoroutine(gotHit());
+        }
         health -= amount;
+    }
+
+    IEnumerator gotHit()
+    {
+        yield return new WaitForSeconds(.01f);
+        GetComponent<SpriteRenderer>().color = Color.white;
+        didGetHit = false;
     }
 
     CharacterController findCharacterTochase()
