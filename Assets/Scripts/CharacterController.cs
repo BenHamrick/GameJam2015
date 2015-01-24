@@ -16,7 +16,7 @@ public class CharacterController : MonoBehaviour {
 
 	public float moneyPercentage;
 
-	private Vector2 aimDirection;
+	private Vector2 aimDirection = Vector2.zero;
 
 	private Vector2 moveDirection;
 

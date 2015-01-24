@@ -27,7 +27,8 @@ public class EnemyController : MonoBehaviour {
             time = 0f;
             characterToHunt = findCharacterTochase();
         }
-        agent.SetDestination(characterToHunt.transform.position);
+        if(characterToHunt != null)
+            agent.SetDestination(characterToHunt.transform.position);
 	}
 
     public void Hit(int amount)
