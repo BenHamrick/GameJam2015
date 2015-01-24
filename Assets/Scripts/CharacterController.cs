@@ -90,14 +90,14 @@ public class CharacterController : MonoBehaviour {
 				time = rateOfFire;
 				
 				if(aimDirection != Vector2.zero){
-					RaycastHit2D hit = Physics2D.Raycast(weapon.position, aimDirection, 100f, 1 << LayerMask.NameToLayer("enemy"));
-					Debug.DrawLine (weapon.position, ((Vector3)weapon.position + (Vector3)aimDirection * 10000.0F) , Color.blue);
+					RaycastHit2D hit = Physics2D.Raycast(weapon.position, aimDirection, 100f, 1 << LayerMask.NameToLayer("Enemy"));
+                    Debug.DrawLine(weapon.position, ((Vector3)weapon.position + (Vector3)aimDirection * 100f), Color.blue);
 					
 					if(hit != null){
-						if (hit.collider != null) {
-							if(hit.collider.transform.GetComponent<EnemyController>() != null){
+						if (hit.transform != null) {
+							if(hit.transform.GetComponent<EnemyController>() != null){
 								
-								hit.collider.transform.GetComponent<EnemyController>().Hit(playerDamage);
+								hit.transform.GetComponent<EnemyController>().Hit(playerDamage);
 							}
 							
 						}
