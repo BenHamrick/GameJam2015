@@ -24,6 +24,8 @@ public class CameraController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+
 		negativeXPlayer = Vector2.zero;
 		positiveXPlayer = Vector2.zero;
 		negativeYPlayer = Vector2.zero;
