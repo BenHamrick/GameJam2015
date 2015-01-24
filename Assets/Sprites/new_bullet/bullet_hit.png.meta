@@ -1,16 +1,18 @@
 fileFormatVersion: 2
-guid: 175d2b1be81b2ea4fbe17ecc524a0cff
+guid: ce0ea8847f1c10245822d6b9c4bbdb56
 TextureImporter:
   fileIDToRecycleName:
-    21300000: rabbit_back_moving_00000
-    21300002: rabbit_back_moving_00001
-    21300004: rabbit_back_moving_00002
-    21300006: rabbit_back_moving_00003
-    21300008: rabbit_back_moving_00004
-    21300010: rabbit_back_moving_00005
-    21300012: rabbit_back_moving_00006
-    21300014: rabbit_back_moving_00007
-    21300016: rabbit_back_moving_00008
+    21300000: bullet_hit_00000
+    21300002: bullet_hit_00001
+    21300004: bullet_hit_00002
+    21300006: bullet_hit_00003
+    21300008: bullet_hit_00004
+    21300010: bullet_hit_00005
+    21300012: bullet_hit_00006
+    21300014: bullet_hit_00007
+    21300016: bullet_hit_00008
+    21300018: bullet_hit_00009
+    21300020: bullet_hit_00010
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -52,93 +54,113 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: rabbit_back_moving_00000
+    - name: bullet_hit_00000
       rect:
         serializedVersion: 2
         x: 2
-        y: 1396
-        width: 750
-        height: 650
+        y: 1746
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: rabbit_back_moving_00001
+    - name: bullet_hit_00001
       rect:
         serializedVersion: 2
-        x: 754
-        y: 1396
-        width: 750
-        height: 650
+        x: 304
+        y: 1746
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: rabbit_back_moving_00002
+    - name: bullet_hit_00002
       rect:
         serializedVersion: 2
-        x: 1506
-        y: 1396
-        width: 750
-        height: 650
+        x: 606
+        y: 1746
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: rabbit_back_moving_00003
-      rect:
-        serializedVersion: 2
-        x: 2258
-        y: 1396
-        width: 750
-        height: 650
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: rabbit_back_moving_00004
-      rect:
-        serializedVersion: 2
-        x: 3010
-        y: 1396
-        width: 750
-        height: 650
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: rabbit_back_moving_00005
+    - name: bullet_hit_00003
       rect:
         serializedVersion: 2
         x: 2
-        y: 744
-        width: 750
-        height: 650
+        y: 1444
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: rabbit_back_moving_00006
+    - name: bullet_hit_00004
       rect:
         serializedVersion: 2
-        x: 754
-        y: 744
-        width: 750
-        height: 650
+        x: 304
+        y: 1444
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: rabbit_back_moving_00007
+    - name: bullet_hit_00005
       rect:
         serializedVersion: 2
-        x: 1506
-        y: 744
-        width: 750
-        height: 650
+        x: 606
+        y: 1444
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: rabbit_back_moving_00008
+    - name: bullet_hit_00006
       rect:
         serializedVersion: 2
-        x: 2258
-        y: 744
-        width: 750
-        height: 650
+        x: 2
+        y: 1142
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bullet_hit_00007
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1142
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bullet_hit_00008
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 1142
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bullet_hit_00009
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 840
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bullet_hit_00010
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 840
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
