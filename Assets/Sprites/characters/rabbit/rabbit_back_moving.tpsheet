@@ -1,0 +1,19 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: rabbit_back_moving.png (2048 x 4096)
+# $TexturePacker:SmartUpdate:1af6d11271e5cb7a0ccb4b0602b9e2f3:d5970f005fb23e3c9996b0d1d0c4c9b7:697470474423ba2743e4e6b47940bc20$
+#
+
+rabbit_back_moving_00000;2;3444;750;650;0.5;0.5
+rabbit_back_moving_00001;754;3444;750;650;0.5;0.5
+rabbit_back_moving_00002;2;2792;750;650;0.5;0.5
+rabbit_back_moving_00003;754;2792;750;650;0.5;0.5
+rabbit_back_moving_00004;2;2140;750;650;0.5;0.5
+rabbit_back_moving_00005;754;2140;750;650;0.5;0.5
+rabbit_back_moving_00006;2;1488;750;650;0.5;0.5
+rabbit_back_moving_00007;754;1488;750;650;0.5;0.5
+rabbit_back_moving_00008;2;836;750;650;0.5;0.5

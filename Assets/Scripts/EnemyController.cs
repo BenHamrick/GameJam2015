@@ -6,9 +6,11 @@ public class EnemyController : MonoBehaviour {
     float time = 0f;
     bool needsMoney = false;
     PolyNavAgent agent;
-    CharacterController characterToHunt;
+    CharacterController characterToHunt = null;
 
-    float health;
+    bool didGetHit;
+
+    public float health;
 
 	// Use this for initialization
 	void Start () {
@@ -21,42 +23,61 @@ public class EnemyController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        time += Time.deltaTime;
-        if(time > 1f)
+        time -= Time.deltaTime;
+        if(time < 0f)
         {
-            time = 0f;
+            time = Random.Range(.5f, 1f);
             characterToHunt = findCharacterTochase();
-        }
-        if(characterToHunt != null)
             agent.SetDestination(characterToHunt.transform.position);
+        }
 	}
 
     public void Hit(int amount)
     {
+        GetComponent<SpriteRenderer>().color = Color.grey;
+        if (!didGetHit)
+        {
+            didGetHit = true;
+            StartCoroutine(gotHit());
+        }
         health -= amount;
+        if(health <= 0f)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    IEnumerator gotHit()
+    {
+        yield return new WaitForSeconds(.01f);
+        GetComponent<SpriteRenderer>().color = Color.white;
+        didGetHit = false;
     }
 
     CharacterController findCharacterTochase()
     {
-        CharacterController playerOfInterest = null;
+        CharacterController playerOfInterest = CharacterController.instance[0];
         int mostMoney = 0;
         float distance = float.MaxValue;
         foreach (CharacterController player in CharacterController.instance)
         {
-            if (needsMoney)
+            if (player != null)
             {
-                if (player.money > mostMoney)
+                if (needsMoney)
                 {
-                    playerOfInterest = player;
-                    mostMoney = player.money;
+                    if (player.money > mostMoney)
+                    {
+                        playerOfInterest = player;
+                        mostMoney = player.money;
+                    }
                 }
-            }
-            else
-            {
-                if(Vector2.Distance(player.transform.position, transform.position) < distance)
+                else
                 {
-                    distance = Vector2.Distance(player.transform.position, transform.position);
-                    playerOfInterest = player;
+                    if (Vector2.Distance(player.transform.position, transform.position) < distance)
+                    {
+                        distance = Vector2.Distance(player.transform.position, transform.position);
+                        playerOfInterest = player;
+                    }
                 }
             }
         }

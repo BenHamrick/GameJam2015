@@ -1,11 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 using InControl;
+using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour {
 
 	public static int playerCounter;
 	public static CharacterController[] instance;
+
+    public Slider healthSlider;
+
+    public GameObject bullet;
 
 	public int playerIndex;
 	public int money;
@@ -21,6 +26,12 @@ public class CharacterController : MonoBehaviour {
 	private Vector2 moveDirection;
 
 	public Transform weapon;
+
+	public int playerDamage;
+
+	public float rateOfFire;
+
+	private float time;
 
 
 	void Awake(){
@@ -39,35 +50,73 @@ public class CharacterController : MonoBehaviour {
 		aimDirection = Vector2.zero;
 
 		ResetCharacter ();
+
+        renderer.castShadows = true;
+        renderer.receiveShadows = true;
 	}
 
 	void Update(){
-		var inputDevice = (InputManager.Devices.Count > playerIndex) ? InputManager.Devices[playerIndex] : null;
 
-		if (inputDevice != null)
-		{
+		time -= Time.deltaTime;
+        if (InputManager.Devices.Count > playerIndex)
+        {
+            Move();
 
-			Aim();
+            Aim();
 
-			Move();
-		}
+
+            Shoot();
+        }
 	}
 
 	private void Aim(){
-		aimDirection = InputManager.Devices [playerIndex].RightStick;
-		
+        if (InputManager.Devices[playerIndex].RightStick != Vector2.zero)
+            aimDirection = InputManager.Devices[playerIndex].RightStick;
+        else
+            aimDirection = moveDirection;
+
 		RaycastHit2D hit = Physics2D.Raycast(weapon.position, aimDirection);
 		Debug.DrawLine (weapon.position, ((Vector3)weapon.position + (Vector3)aimDirection * 10000.0F) , Color.red);
 	}
 
 	private void Move(){
+
 		moveDirection = InputManager.Devices [playerIndex].LeftStick;
 
-		RaycastHit2D hit = Physics2D.Raycast(weapon.position, aimDirection);
+		RaycastHit2D hit = Physics2D.Raycast(weapon.position, moveDirection);
 		Debug.DrawLine (weapon.position, ((Vector3)weapon.position + (Vector3)moveDirection * 10000.0F) , Color.green);
 
 		rigidbody2D.velocity = moveDirection * force;
 	}
+
+	private void Shoot(){
+		if(InputManager.Devices [playerIndex].RightTrigger){
+			if(time < 0){
+				time = rateOfFire;
+                
+				if(aimDirection != Vector2.zero){
+                    float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
+                    GameObject bulletInstance = (GameObject)Instantiate(bullet, weapon.position, Quaternion.AngleAxis(angle, Vector3.forward));
+                    aimDirection.Normalize();
+                    bulletInstance.rigidbody2D.AddForce(aimDirection * 500f);
+                    Debug.DrawLine(weapon.position, ((Vector3)weapon.position + (Vector3)aimDirection * 100f), Color.blue);
+				}
+
+			}
+
+
+		}
+		else{
+
+			if(time != rateOfFire){
+				time = rateOfFire;
+			}
+
+		}
+		
+		
+	}
+
 
 	public void ResetCharacter(){
 		money = 0;
@@ -76,7 +125,7 @@ public class CharacterController : MonoBehaviour {
 	public int Hit(int damage){
 
 		health -= damage;
-
+        healthSlider.value = (float)health / 100f;
 		if (health > 0) {
 			tempMoneyLoss = (int)(money * moneyPercentage);
 			
