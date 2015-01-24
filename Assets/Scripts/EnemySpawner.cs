@@ -21,6 +21,7 @@ public class EnemySpawner : MonoBehaviour {
         time += Time.deltaTime;
         if (time > randomTime && amountSpawnd < amountToSpawn)
         {
+            amountSpawnd++;
             Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
             randomTime = Random.Range(.1f, 2f);
             time = 0f;
