@@ -7,6 +7,8 @@ public class CharacterController : MonoBehaviour {
 	public static int playerCounter;
 	public static CharacterController[] instance;
 
+    public GameObject bullet;
+
 	public int playerIndex;
 	public int money;
 	public int health;
@@ -48,21 +50,16 @@ public class CharacterController : MonoBehaviour {
 	}
 
 	void Update(){
-		var inputDevice = (InputManager.Devices.Count > playerIndex) ? InputManager.Devices[playerIndex] : null;
 
 		time -= Time.deltaTime;
+        if (InputManager.Devices.Count > playerIndex)
+        {
+            Aim();
 
-		if (inputDevice != null)
-		{
+            Move();
 
-			Aim();
-
-			Move();
-
-			Shoot();
-
-
-		}
+            Shoot();
+        }
 	}
 
 	private void Aim(){
@@ -82,27 +79,16 @@ public class CharacterController : MonoBehaviour {
 	}
 
 	private void Shoot(){
-
 		if(InputManager.Devices [playerIndex].RightTrigger){
-		
 			if(time < 0){
-
 				time = rateOfFire;
-				
+                
 				if(aimDirection != Vector2.zero){
-					RaycastHit2D hit = Physics2D.Raycast(weapon.position, aimDirection, 100f, 1 << LayerMask.NameToLayer("Enemy"));
+                    float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
+                    GameObject bulletInstance = (GameObject)Instantiate(bullet, weapon.position, Quaternion.AngleAxis(angle, Vector3.forward));
+                    aimDirection.Normalize();
+                    bulletInstance.rigidbody2D.AddForce(aimDirection * 500f);
                     Debug.DrawLine(weapon.position, ((Vector3)weapon.position + (Vector3)aimDirection * 100f), Color.blue);
-					
-					if(hit != null){
-						if (hit.transform != null) {
-							if(hit.transform.GetComponent<EnemyController>() != null){
-								
-								hit.transform.GetComponent<EnemyController>().Hit(playerDamage);
-							}
-							
-						}
-					}
-
 				}
 
 			}
