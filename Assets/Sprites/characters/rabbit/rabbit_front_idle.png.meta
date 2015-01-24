@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: 76ed05fa49e4e8e499d0efd7faa05ac8
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: rabbit_front_idle_00000
+    21300002: rabbit_front_idle_00001
+    21300004: rabbit_front_idle_00002
+    21300006: rabbit_front_idle_00003
+    21300008: rabbit_front_idle_00004
+    21300010: rabbit_front_idle_00005
+    21300012: rabbit_front_idle_00006
+    21300014: rabbit_front_idle_00007
+    21300016: rabbit_front_idle_00008
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: rabbit_front_idle_00000
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1396
+        width: 750
+        height: 650
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rabbit_front_idle_00001
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1396
+        width: 750
+        height: 650
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rabbit_front_idle_00002
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 1396
+        width: 750
+        height: 650
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rabbit_front_idle_00003
+      rect:
+        serializedVersion: 2
+        x: 2258
+        y: 1396
+        width: 750
+        height: 650
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rabbit_front_idle_00004
+      rect:
+        serializedVersion: 2
+        x: 3010
+        y: 1396
+        width: 750
+        height: 650
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rabbit_front_idle_00005
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 744
+        width: 750
+        height: 650
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rabbit_front_idle_00006
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 744
+        width: 750
+        height: 650
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rabbit_front_idle_00007
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 744
+        width: 750
+        height: 650
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rabbit_front_idle_00008
+      rect:
+        serializedVersion: 2
+        x: 2258
+        y: 744
+        width: 750
+        height: 650
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -1,0 +1,19 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: rabbit_back_idle.png (4096 x 2048)
+# $TexturePacker:SmartUpdate:22050a43bec5d27309006819b1653f6b:22c24553f05389f8d8bf4d836386bd17:e98800eded2bbeb4b6ecae3da36a1de1$
+#
+
+rabbit_back_idle_00000;2;1396;750;650;0.5;0.5
+rabbit_back_idle_00001;754;1396;750;650;0.5;0.5
+rabbit_back_idle_00002;1506;1396;750;650;0.5;0.5
+rabbit_back_idle_00003;2258;1396;750;650;0.5;0.5
+rabbit_back_idle_00004;3010;1396;750;650;0.5;0.5
+rabbit_back_idle_00005;2;744;750;650;0.5;0.5
+rabbit_back_idle_00006;754;744;750;650;0.5;0.5
+rabbit_back_idle_00007;1506;744;750;650;0.5;0.5
+rabbit_back_idle_00008;2258;744;750;650;0.5;0.5

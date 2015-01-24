@@ -24,6 +24,8 @@ public class CameraController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+
 		negativeXPlayer = Vector2.zero;
 		positiveXPlayer = Vector2.zero;
 		negativeYPlayer = Vector2.zero;
@@ -35,50 +37,57 @@ public class CameraController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		negativeXPlayer = Vector2.zero;
-		positiveXPlayer = Vector2.zero;
-		negativeYPlayer = Vector2.zero;
-		positiveYPlayer = Vector2.zero;
+		negativeXPlayer = CharacterController.instance[0].transform.position;
+        positiveXPlayer = CharacterController.instance[0].transform.position;
+        negativeYPlayer = CharacterController.instance[0].transform.position;
+        positiveYPlayer = CharacterController.instance[0].transform.position;
 
 		for(int i = 0; i < CharacterController.instance.Length; i += 1){
-			if(CharacterController.instance[i].transform.position.x < negativeXPlayer.x){
-				negativeXPlayer = CharacterController.instance[i].transform.position;
+            if (CharacterController.instance[i] != null)
+            {
+                if (CharacterController.instance[i].transform.position.x < negativeXPlayer.x)
+                {
+                    negativeXPlayer = CharacterController.instance[i].transform.position;
 
-				negativeXPlayerC = CharacterController.instance[i];
-			}
+                    negativeXPlayerC = CharacterController.instance[i];
+                }
 
-			else if(CharacterController.instance[i].transform.position.x > positiveXPlayer.x){
-				positiveXPlayer = CharacterController.instance[i].transform.position;
+                else if (CharacterController.instance[i].transform.position.x > positiveXPlayer.x)
+                {
+                    positiveXPlayer = CharacterController.instance[i].transform.position;
 
-				positiveXPlayerC = CharacterController.instance[i];
-			}
+                    positiveXPlayerC = CharacterController.instance[i];
+                }
 
-			if(CharacterController.instance[i].transform.position.y < negativeYPlayer.y){
-				negativeYPlayer = CharacterController.instance[i].transform.position;
+                if (CharacterController.instance[i].transform.position.y < negativeYPlayer.y)
+                {
+                    negativeYPlayer = CharacterController.instance[i].transform.position;
 
-				negativeYPlayerC = CharacterController.instance[i];
-			}
+                    negativeYPlayerC = CharacterController.instance[i];
+                }
 
-			else if(CharacterController.instance[i].transform.position.y > positiveYPlayer.y){
-				positiveYPlayer = CharacterController.instance[i].transform.position;
+                else if (CharacterController.instance[i].transform.position.y > positiveYPlayer.y)
+                {
+                    positiveYPlayer = CharacterController.instance[i].transform.position;
 
-				positiveYPlayerC = CharacterController.instance[i];
-			}
+                    positiveYPlayerC = CharacterController.instance[i];
+                }
+            }
 		}
 
 		if (positiveXPlayer.x > 0 && negativeXPlayer.x < 0) {
 			newX = negativeXPlayer.x + ((float)(positiveXPlayer.x + Mathf.Abs(negativeXPlayer.x)) / 2.0f);
 		}
 		else{
-			newX = negativeXPlayer.x + ((float)(Mathf.Abs(positiveXPlayer.x) - Mathf.Abs(negativeXPlayer.x)) / 2.0f);
+			newX = negativeXPlayer.x + Mathf.Abs(((float)(Mathf.Abs(positiveXPlayer.x) - Mathf.Abs(negativeXPlayer.x)) / 2.0f));
 		}
 
-		if (positiveYPlayer.y > 0 && negativeYPlayer.x < 0) {
+		if (positiveYPlayer.y > 0 && negativeYPlayer.y < 0) {
 			newY = negativeYPlayer.y + ((float)(positiveYPlayer.y + Mathf.Abs(negativeYPlayer.y)) / 2.0f);
 		}
 		else {
 
-			newY = negativeYPlayer.y + ((float)(Mathf.Abs(positiveYPlayer.y) - Mathf.Abs(negativeYPlayer.y)) / 2.0f);
+			newY = negativeYPlayer.y + Mathf.Abs(((float)(Mathf.Abs(positiveYPlayer.y) - Mathf.Abs(negativeYPlayer.y)) / 2.0f));
 		}
 
 

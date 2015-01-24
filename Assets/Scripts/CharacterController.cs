@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using InControl;
+using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour {
 
 	public static int playerCounter;
 	public static CharacterController[] instance;
+
+    public Slider healthSlider;
 
     public GameObject bullet;
 
@@ -47,6 +50,9 @@ public class CharacterController : MonoBehaviour {
 		aimDirection = Vector2.zero;
 
 		ResetCharacter ();
+
+        renderer.castShadows = true;
+        renderer.receiveShadows = true;
 	}
 
 	void Update(){
@@ -74,6 +80,7 @@ public class CharacterController : MonoBehaviour {
 	}
 
 	private void Move(){
+
 		moveDirection = InputManager.Devices [playerIndex].LeftStick;
 
 		RaycastHit2D hit = Physics2D.Raycast(weapon.position, moveDirection);
@@ -118,7 +125,7 @@ public class CharacterController : MonoBehaviour {
 	public int Hit(int damage){
 
 		health -= damage;
-
+        healthSlider.value = (float)health / 100f;
 		if (health > 0) {
 			tempMoneyLoss = (int)(money * moneyPercentage);
 			
