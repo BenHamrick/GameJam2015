@@ -6,7 +6,7 @@ public class EnemyController : MonoBehaviour {
     float time = 0f;
     bool needsMoney = false;
     PolyNavAgent agent;
-    CharacterController characterToHunt;
+    CharacterController characterToHunt = null;
 
     float health;
 
@@ -21,24 +21,25 @@ public class EnemyController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        time += Time.deltaTime;
-        if(time > 1f)
+        time -= Time.deltaTime;
+        if(time < 0f)
         {
-            time = 0f;
+            time = .5f;
             characterToHunt = findCharacterTochase();
-        }
-        if(characterToHunt != null)
             agent.SetDestination(characterToHunt.transform.position);
+        }
+        
 	}
 
     public void Hit(int amount)
     {
+        print("hi!");
         health -= amount;
     }
 
     CharacterController findCharacterTochase()
     {
-        CharacterController playerOfInterest = null;
+        CharacterController playerOfInterest = CharacterController.instance[0];
         int mostMoney = 0;
         float distance = float.MaxValue;
         foreach (CharacterController player in CharacterController.instance)

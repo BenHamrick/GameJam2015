@@ -75,7 +75,7 @@ public class CharacterController : MonoBehaviour {
 	private void Move(){
 		moveDirection = InputManager.Devices [playerIndex].LeftStick;
 
-		RaycastHit2D hit = Physics2D.Raycast(weapon.position, aimDirection);
+        RaycastHit2D hit = Physics2D.Raycast(weapon.position, moveDirection);
 		Debug.DrawLine (weapon.position, ((Vector3)weapon.position + (Vector3)moveDirection * 10000.0F) , Color.green);
 
 		rigidbody2D.velocity = moveDirection * force;
