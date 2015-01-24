@@ -19,6 +19,12 @@ public class CharacterController : MonoBehaviour {
 
 	public float force;
 
+	public float shakeDuration;
+
+	public float shakeSpeed;
+
+	public float shakeMagnitude;
+
 	public float moneyPercentage;
 
 	private Vector2 aimDirection = Vector2.zero;
@@ -123,6 +129,7 @@ public class CharacterController : MonoBehaviour {
 	}
 
 	public int Hit(int damage){
+		PerlinShake.instance.PlayShake (shakeDuration, shakeSpeed, shakeMagnitude);
 
 		health -= damage;
         healthSlider.value = (float)health / 100f;
