@@ -54,16 +54,20 @@ public class CharacterController : MonoBehaviour {
 		time -= Time.deltaTime;
         if (InputManager.Devices.Count > playerIndex)
         {
+            Move();
+
             Aim();
 
-            Move();
 
             Shoot();
         }
 	}
 
 	private void Aim(){
-		aimDirection = InputManager.Devices [playerIndex].RightStick;
+        if (InputManager.Devices[playerIndex].RightStick != Vector2.zero)
+            aimDirection = InputManager.Devices[playerIndex].RightStick;
+        else
+            aimDirection = moveDirection;
 
 		RaycastHit2D hit = Physics2D.Raycast(weapon.position, aimDirection);
 		Debug.DrawLine (weapon.position, ((Vector3)weapon.position + (Vector3)aimDirection * 10000.0F) , Color.red);

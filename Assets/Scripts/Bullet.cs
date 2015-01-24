@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour {
 
+    public GameObject bulletHit;
     public int damage;
 
     float time;
@@ -27,6 +28,10 @@ public class Bullet : MonoBehaviour {
         if (controller != null)
         {
             controller.Hit(damage);
+        }
+        if (bulletHit != null)
+        {
+            Instantiate(bulletHit, transform.position, transform.rotation);
         }
         Destroy(gameObject);
     }
