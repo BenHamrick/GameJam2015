@@ -23,6 +23,7 @@ public class CharacterController : MonoBehaviour {
 	public Transform weapon;
 
 
+
 	void Awake(){
 		if (instance == null) {
 			instance = new CharacterController[4];
@@ -44,18 +45,24 @@ public class CharacterController : MonoBehaviour {
 	void Update(){
 		var inputDevice = (InputManager.Devices.Count > playerIndex) ? InputManager.Devices[playerIndex] : null;
 
+
+
 		if (inputDevice != null)
 		{
 
 			Aim();
 
 			Move();
+
+			Shoot();
+
+
 		}
 	}
 
 	private void Aim(){
 		aimDirection = InputManager.Devices [playerIndex].RightStick;
-		
+
 		RaycastHit2D hit = Physics2D.Raycast(weapon.position, aimDirection);
 		Debug.DrawLine (weapon.position, ((Vector3)weapon.position + (Vector3)aimDirection * 10000.0F) , Color.red);
 	}
@@ -68,6 +75,27 @@ public class CharacterController : MonoBehaviour {
 
 		rigidbody2D.velocity = moveDirection * force;
 	}
+
+	private void Shoot(){
+
+		if(InputManager.Devices [playerIndex].RightTrigger){
+		
+			if(aimDirection != Vector2.zero){
+				RaycastHit2D hit = Physics2D.Raycast(weapon.position, aimDirection);
+				Debug.DrawLine (weapon.position, ((Vector3)weapon.position + (Vector3)aimDirection * 10000.0F) , Color.blue);
+
+
+				if (hit.collider != null) {
+					float distance = Mathf.Abs(hit.point.y - transform.position.y);
+					//float heightError = floatHeight - distance;
+					//float force = liftForce * heightError - rigidbody2D.velocity.y * damping;
+					rigidbody2D.AddForce(Vector3.up * force);
+				}
+			}
+		}
+
+	}
+
 
 	public void ResetCharacter(){
 		money = 0;
