@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour {
 
     bool didGetHit;
 
-    float health;
+    public float health;
 
 	// Use this for initialization
 	void Start () {
@@ -26,7 +26,7 @@ public class EnemyController : MonoBehaviour {
         time -= Time.deltaTime;
         if(time < 0f)
         {
-            time = .5f;
+            time = Random.Range(.5f, 1f);
             characterToHunt = findCharacterTochase();
             agent.SetDestination(characterToHunt.transform.position);
         }
@@ -41,6 +41,10 @@ public class EnemyController : MonoBehaviour {
             StartCoroutine(gotHit());
         }
         health -= amount;
+        if(health <= 0f)
+        {
+            Destroy(gameObject);
+        }
     }
 
     IEnumerator gotHit()
@@ -57,20 +61,23 @@ public class EnemyController : MonoBehaviour {
         float distance = float.MaxValue;
         foreach (CharacterController player in CharacterController.instance)
         {
-            if (needsMoney)
+            if (player != null)
             {
-                if (player.money > mostMoney)
+                if (needsMoney)
                 {
-                    playerOfInterest = player;
-                    mostMoney = player.money;
+                    if (player.money > mostMoney)
+                    {
+                        playerOfInterest = player;
+                        mostMoney = player.money;
+                    }
                 }
-            }
-            else
-            {
-                if(Vector2.Distance(player.transform.position, transform.position) < distance)
+                else
                 {
-                    distance = Vector2.Distance(player.transform.position, transform.position);
-                    playerOfInterest = player;
+                    if (Vector2.Distance(player.transform.position, transform.position) < distance)
+                    {
+                        distance = Vector2.Distance(player.transform.position, transform.position);
+                        playerOfInterest = player;
+                    }
                 }
             }
         }
