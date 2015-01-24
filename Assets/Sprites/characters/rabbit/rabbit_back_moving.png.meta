@@ -56,7 +56,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 3444
+        y: 1396
         width: 750
         height: 650
       alignment: 0
@@ -66,7 +66,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 754
-        y: 3444
+        y: 1396
         width: 750
         height: 650
       alignment: 0
@@ -75,8 +75,8 @@ TextureImporter:
     - name: rabbit_back_moving_00002
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2792
+        x: 1506
+        y: 1396
         width: 750
         height: 650
       alignment: 0
@@ -85,8 +85,8 @@ TextureImporter:
     - name: rabbit_back_moving_00003
       rect:
         serializedVersion: 2
-        x: 754
-        y: 2792
+        x: 2258
+        y: 1396
         width: 750
         height: 650
       alignment: 0
@@ -95,8 +95,8 @@ TextureImporter:
     - name: rabbit_back_moving_00004
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2140
+        x: 3010
+        y: 1396
         width: 750
         height: 650
       alignment: 0
@@ -105,8 +105,8 @@ TextureImporter:
     - name: rabbit_back_moving_00005
       rect:
         serializedVersion: 2
-        x: 754
-        y: 2140
+        x: 2
+        y: 744
         width: 750
         height: 650
       alignment: 0
@@ -115,8 +115,8 @@ TextureImporter:
     - name: rabbit_back_moving_00006
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1488
+        x: 754
+        y: 744
         width: 750
         height: 650
       alignment: 0
@@ -125,8 +125,8 @@ TextureImporter:
     - name: rabbit_back_moving_00007
       rect:
         serializedVersion: 2
-        x: 754
-        y: 1488
+        x: 1506
+        y: 744
         width: 750
         height: 650
       alignment: 0
@@ -135,8 +135,8 @@ TextureImporter:
     - name: rabbit_back_moving_00008
       rect:
         serializedVersion: 2
-        x: 2
-        y: 836
+        x: 2258
+        y: 744
         width: 750
         height: 650
       alignment: 0
