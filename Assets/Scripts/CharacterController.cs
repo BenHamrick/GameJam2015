@@ -75,7 +75,7 @@ public class CharacterController : MonoBehaviour {
 	private void Move(){
 		moveDirection = InputManager.Devices [playerIndex].LeftStick;
 
-        RaycastHit2D hit = Physics2D.Raycast(weapon.position, moveDirection);
+		RaycastHit2D hit = Physics2D.Raycast(weapon.position, moveDirection);
 		Debug.DrawLine (weapon.position, ((Vector3)weapon.position + (Vector3)moveDirection * 10000.0F) , Color.green);
 
 		rigidbody2D.velocity = moveDirection * force;
@@ -90,7 +90,7 @@ public class CharacterController : MonoBehaviour {
 				time = rateOfFire;
 				
 				if(aimDirection != Vector2.zero){
-					RaycastHit2D hit = Physics2D.Raycast(weapon.position, aimDirection);
+					RaycastHit2D hit = Physics2D.Raycast(weapon.position, aimDirection, 100f, (1 << LayerMask.NameToLayer("enemy"));
 					Debug.DrawLine (weapon.position, ((Vector3)weapon.position + (Vector3)aimDirection * 10000.0F) , Color.blue);
 					
 					if(hit != null){
