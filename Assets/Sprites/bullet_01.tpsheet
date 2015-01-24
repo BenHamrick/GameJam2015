@@ -1,0 +1,30 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: bullet_02.png (256 x 2048)
+# $TexturePacker:SmartUpdate:2f265be9e937ec901c60c55a2b13118d:ee720e27a04a91e76202e91aef8ba378:644eb03fb55c5af0a6f31861e2f2aaa2$
+#
+
+bullet_01_00005;2;1946;200;100;0.5;0.5
+bullet_01_00006;2;1844;200;100;0.5;0.5
+bullet_01_00007;2;1742;200;100;0.5;0.5
+bullet_01_00008;2;1640;200;100;0.5;0.5
+bullet_01_00009;2;1538;200;100;0.5;0.5
+bullet_01_00010;2;1436;200;100;0.5;0.5
+bullet_01_00011;2;1334;200;100;0.5;0.5
+bullet_01_00012;2;1232;200;100;0.5;0.5
+bullet_01_00013;2;1130;200;100;0.5;0.5
+bullet_01_00014;2;1028;200;100;0.5;0.5
+bullet_01_00015;2;926;200;100;0.5;0.5
+bullet_01_00016;2;824;200;100;0.5;0.5
+bullet_01_00017;2;722;200;100;0.5;0.5
+bullet_01_00018;2;620;200;100;0.5;0.5
+bullet_01_00019;2;518;200;100;0.5;0.5
+bullet_01_00020;2;416;200;100;0.5;0.5
+bullet_01_00021;2;314;200;100;0.5;0.5
+bullet_01_00022;2;212;200;100;0.5;0.5
+bullet_01_00023;2;110;200;100;0.5;0.5
+bullet_01_00024;2;8;200;100;0.5;0.5
