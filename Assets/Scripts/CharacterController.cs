@@ -14,7 +14,7 @@ public class CharacterController : MonoBehaviour {
 
 	public float moneyPercentage;
 
-	private Vector2 aimDirection;
+	private Vector2 aimDirection = Vector2.zero;
 
 	public Transform weapon;
 
