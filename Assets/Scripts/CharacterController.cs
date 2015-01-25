@@ -45,7 +45,12 @@ public class CharacterController : MonoBehaviour {
 
     int controllerAmount = 0;
 
+    bool animatingUp;
+
+    SpriteRenderer sprtieRenderer;
+
 	void Awake(){
+        sprtieRenderer = GetComponent<SpriteRenderer>();
         xScale = transform.localScale.x;
 
 		if (instance == null) {
@@ -115,7 +120,11 @@ public class CharacterController : MonoBehaviour {
     {
         if (aimDirection.y < 0f)
         {
-            animator.SetTrigger("UpLeft");
+            if (animatingUp)
+            {
+                animatingUp = false;
+                animator.SetTrigger("UpLeft");
+            }
 
             if (aimDirection.x < 0f)
             {
@@ -128,7 +137,11 @@ public class CharacterController : MonoBehaviour {
         }
         else
         {
-            animator.SetTrigger("DownLeft");
+            if (!animatingUp)
+            {
+                animatingUp = true;
+                animator.SetTrigger("DownLeft");
+            }
 
             if (aimDirection.x < 0f)
             {
@@ -160,7 +173,14 @@ public class CharacterController : MonoBehaviour {
 	private void Move(){
 
 		moveDirection = InputManager.Devices [playerIndex].LeftStick;
-
+        if(moveDirection != Vector2.zero)
+        {
+            animator.SetBool("Running",true);
+        }
+        else
+        {
+            animator.SetBool("Running", false);
+        }
 		rigidbody2D.velocity = moveDirection * force;
 	}
 
@@ -172,6 +192,7 @@ public class CharacterController : MonoBehaviour {
 				if(aimDirection != Vector2.zero){
                     float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
                     GameObject bulletInstance = (GameObject)Instantiate(bullet, weapon[weaponCount].position, Quaternion.AngleAxis(angle, Vector3.forward));
+                    bulletInstance.GetComponent<SpriteRenderer>().sortingOrder = sprtieRenderer.sortingOrder + 500;
                     weaponCount++;
                     if (weaponCount >= weapon.Length)
                         weaponCount = 0;
