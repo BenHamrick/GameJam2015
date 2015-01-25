@@ -66,191 +66,191 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 1118
-        width: 738
-        height: 928
-      alignment: 9
-      pivot: {x: .543360412, y: .557112098}
+        y: 2794
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00001
       rect:
         serializedVersion: 2
-        x: 2
-        y: 190
-        width: 734
-        height: 926
-      alignment: 9
-      pivot: {x: .546321511, y: .558315337}
+        x: 1004
+        y: 2794
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00002
       rect:
         serializedVersion: 2
-        x: 738
-        y: 200
-        width: 729
-        height: 916
-      alignment: 9
-      pivot: {x: .548696816, y: .563318789}
+        x: 2006
+        y: 2794
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00003
       rect:
         serializedVersion: 2
-        x: 1469
-        y: 225
-        width: 724
-        height: 903
-      alignment: 9
-      pivot: {x: .551104963, y: .571428597}
+        x: 3008
+        y: 2794
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00004
       rect:
         serializedVersion: 2
-        x: 2195
-        y: 255
-        width: 718
-        height: 886
-      alignment: 9
-      pivot: {x: .552924812, y: .582392752}
+        x: 4010
+        y: 2794
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00005
       rect:
         serializedVersion: 2
-        x: 2915
-        y: 289
-        width: 714
-        height: 869
-      alignment: 9
-      pivot: {x: .554621875, y: .593785942}
+        x: 5012
+        y: 2794
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00006
       rect:
         serializedVersion: 2
-        x: 3631
-        y: 317
-        width: 708
-        height: 858
-      alignment: 9
-      pivot: {x: .556497157, y: .600233078}
+        x: 6014
+        y: 2794
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00007
       rect:
         serializedVersion: 2
-        x: 4341
-        y: 336
-        width: 703
-        height: 850
-      alignment: 9
-      pivot: {x: .557610214, y: .605882347}
+        x: 7016
+        y: 2794
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00008
       rect:
         serializedVersion: 2
-        x: 5046
-        y: 349
-        width: 698
-        height: 845
-      alignment: 9
-      pivot: {x: .560171902, y: .609467447}
+        x: 2
+        y: 1492
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00009
       rect:
         serializedVersion: 2
-        x: 5746
-        y: 357
-        width: 694
-        height: 842
-      alignment: 9
-      pivot: {x: .560518742, y: .610451281}
+        x: 1004
+        y: 1492
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00010
       rect:
         serializedVersion: 2
-        x: 6442
-        y: 361
-        width: 695
-        height: 841
-      alignment: 9
-      pivot: {x: .559712231, y: .611177146}
+        x: 2006
+        y: 1492
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00011
       rect:
         serializedVersion: 2
-        x: 5750
-        y: 1204
-        width: 694
-        height: 842
-      alignment: 9
-      pivot: {x: .560518742, y: .610451281}
+        x: 3008
+        y: 1492
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00012
       rect:
         serializedVersion: 2
-        x: 5050
-        y: 1201
-        width: 698
-        height: 845
-      alignment: 9
-      pivot: {x: .560171902, y: .609467447}
+        x: 4010
+        y: 1492
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00013
       rect:
         serializedVersion: 2
-        x: 4345
-        y: 1196
-        width: 703
-        height: 850
-      alignment: 9
-      pivot: {x: .557610214, y: .605882347}
+        x: 5012
+        y: 1492
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00014
       rect:
         serializedVersion: 2
-        x: 3635
-        y: 1188
-        width: 708
-        height: 858
-      alignment: 9
-      pivot: {x: .556497157, y: .600233078}
+        x: 6014
+        y: 1492
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00015
       rect:
         serializedVersion: 2
-        x: 2919
-        y: 1177
-        width: 714
-        height: 869
-      alignment: 9
-      pivot: {x: .554621875, y: .593785942}
+        x: 7016
+        y: 1492
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00016
       rect:
         serializedVersion: 2
-        x: 2199
-        y: 1160
-        width: 718
-        height: 886
-      alignment: 9
-      pivot: {x: .552924812, y: .582392752}
+        x: 2
+        y: 190
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00017
       rect:
         serializedVersion: 2
-        x: 1473
-        y: 1143
-        width: 724
-        height: 903
-      alignment: 9
-      pivot: {x: .551104963, y: .571428597}
+        x: 1004
+        y: 190
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: bird_front_moving_00018
       rect:
         serializedVersion: 2
-        x: 742
-        y: 1130
-        width: 729
-        height: 916
-      alignment: 9
-      pivot: {x: .548696816, y: .563318789}
+        x: 2006
+        y: 190
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
