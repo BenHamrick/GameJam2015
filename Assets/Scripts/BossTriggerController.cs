@@ -155,7 +155,10 @@ public class BossTriggerController : MonoBehaviour {
 		bossFight = fight;
 
         StartCoroutine(activate(fight));
-		
+
+		if (fight) {
+			MusicController.instance.BossSeen();		
+		}
 		
 	}
 
