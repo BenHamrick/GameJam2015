@@ -1,0 +1,256 @@
+fileFormatVersion: 2
+guid: 74e2822e815384e059eac2d9e3cf227c
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bird_back_moving_00000
+    21300002: bird_back_moving_00001
+    21300004: bird_back_moving_00002
+    21300006: bird_back_moving_00003
+    21300008: bird_back_moving_00004
+    21300010: bird_back_moving_00005
+    21300012: bird_back_moving_00006
+    21300014: bird_back_moving_00007
+    21300016: bird_back_moving_00008
+    21300018: bird_back_moving_00009
+    21300020: bird_back_moving_00010
+    21300022: bird_back_moving_00011
+    21300024: bird_back_moving_00012
+    21300026: bird_back_moving_00013
+    21300028: bird_back_moving_00014
+    21300030: bird_back_moving_00015
+    21300032: bird_back_moving_00016
+    21300034: bird_back_moving_00017
+    21300036: bird_back_moving_00018
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: bird_back_moving_00000
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2794
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00001
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 2794
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00002
+      rect:
+        serializedVersion: 2
+        x: 2006
+        y: 2794
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00003
+      rect:
+        serializedVersion: 2
+        x: 3008
+        y: 2794
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00004
+      rect:
+        serializedVersion: 2
+        x: 4010
+        y: 2794
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00005
+      rect:
+        serializedVersion: 2
+        x: 5012
+        y: 2794
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00006
+      rect:
+        serializedVersion: 2
+        x: 6014
+        y: 2794
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00007
+      rect:
+        serializedVersion: 2
+        x: 7016
+        y: 2794
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00008
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1492
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00009
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 1492
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00010
+      rect:
+        serializedVersion: 2
+        x: 2006
+        y: 1492
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00011
+      rect:
+        serializedVersion: 2
+        x: 3008
+        y: 1492
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00012
+      rect:
+        serializedVersion: 2
+        x: 4010
+        y: 1492
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00013
+      rect:
+        serializedVersion: 2
+        x: 5012
+        y: 1492
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00014
+      rect:
+        serializedVersion: 2
+        x: 6014
+        y: 1492
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00015
+      rect:
+        serializedVersion: 2
+        x: 7016
+        y: 1492
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00016
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 190
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00017
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 190
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird_back_moving_00018
+      rect:
+        serializedVersion: 2
+        x: 2006
+        y: 190
+        width: 1000
+        height: 1300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
