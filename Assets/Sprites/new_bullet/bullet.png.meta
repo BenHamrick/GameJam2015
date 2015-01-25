@@ -22,6 +22,26 @@ TextureImporter:
     21300034: bullet_00022
     21300036: bullet_00023
     21300038: bullet_00024
+    21300040: new_bullet_00005
+    21300042: new_bullet_00006
+    21300044: new_bullet_00007
+    21300046: new_bullet_00008
+    21300048: new_bullet_00009
+    21300050: new_bullet_00010
+    21300052: new_bullet_00011
+    21300054: new_bullet_00012
+    21300056: new_bullet_00013
+    21300058: new_bullet_00014
+    21300060: new_bullet_00015
+    21300062: new_bullet_00016
+    21300064: new_bullet_00017
+    21300066: new_bullet_00018
+    21300068: new_bullet_00019
+    21300070: new_bullet_00020
+    21300072: new_bullet_00021
+    21300074: new_bullet_00022
+    21300076: new_bullet_00023
+    21300078: new_bullet_00024
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -63,7 +83,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: bullet_00005
+    - name: new_bullet_00005
       rect:
         serializedVersion: 2
         x: 2
@@ -73,7 +93,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00006
+    - name: new_bullet_00006
       rect:
         serializedVersion: 2
         x: 154
@@ -83,7 +103,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00007
+    - name: new_bullet_00007
       rect:
         serializedVersion: 2
         x: 306
@@ -93,7 +113,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00008
+    - name: new_bullet_00008
       rect:
         serializedVersion: 2
         x: 2
@@ -103,7 +123,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00009
+    - name: new_bullet_00009
       rect:
         serializedVersion: 2
         x: 154
@@ -113,7 +133,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00010
+    - name: new_bullet_00010
       rect:
         serializedVersion: 2
         x: 306
@@ -123,7 +143,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00011
+    - name: new_bullet_00011
       rect:
         serializedVersion: 2
         x: 2
@@ -133,7 +153,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00012
+    - name: new_bullet_00012
       rect:
         serializedVersion: 2
         x: 154
@@ -143,7 +163,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00013
+    - name: new_bullet_00013
       rect:
         serializedVersion: 2
         x: 306
@@ -153,7 +173,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00014
+    - name: new_bullet_00014
       rect:
         serializedVersion: 2
         x: 2
@@ -163,7 +183,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00015
+    - name: new_bullet_00015
       rect:
         serializedVersion: 2
         x: 154
@@ -173,7 +193,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00016
+    - name: new_bullet_00016
       rect:
         serializedVersion: 2
         x: 306
@@ -183,7 +203,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00017
+    - name: new_bullet_00017
       rect:
         serializedVersion: 2
         x: 2
@@ -193,7 +213,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00018
+    - name: new_bullet_00018
       rect:
         serializedVersion: 2
         x: 154
@@ -203,7 +223,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00019
+    - name: new_bullet_00019
       rect:
         serializedVersion: 2
         x: 306
@@ -213,7 +233,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00020
+    - name: new_bullet_00020
       rect:
         serializedVersion: 2
         x: 2
@@ -223,7 +243,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00021
+    - name: new_bullet_00021
       rect:
         serializedVersion: 2
         x: 154
@@ -233,7 +253,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00022
+    - name: new_bullet_00022
       rect:
         serializedVersion: 2
         x: 306
@@ -243,7 +263,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00023
+    - name: new_bullet_00023
       rect:
         serializedVersion: 2
         x: 2
@@ -253,7 +273,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bullet_00024
+    - name: new_bullet_00024
       rect:
         serializedVersion: 2
         x: 154
