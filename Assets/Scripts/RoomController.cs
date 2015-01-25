@@ -8,7 +8,8 @@ public class RoomController : MonoBehaviour {
 
 	private List<CharacterController> charactersCrossed;
 	
-	public GameObject door;
+	public GameObject doorEnter;
+	public GameObject doorExit;
 
 	public bool onPlatform = false;
 
@@ -18,15 +19,15 @@ public class RoomController : MonoBehaviour {
 		characterCounter = 0;
 		charactersCrossed = new List<CharacterController> ();
 
-		door.SetActive (false);
+		doorEnter.SetActive (false);
+
+		doorExit.SetActive (true);
 	}
 
 	void OnTriggerEnter2D(Collider2D collider){
 
 		if (!onPlatform) {
 			if (collider.gameObject.GetComponent<CharacterController> () != null) {
-
-				print (collider.gameObject.GetComponent<CharacterController> ().playerIndex + " Crossed"); 
 
 				if(!charactersCrossed.Contains(collider.gameObject.GetComponent<CharacterController> ())){
 
@@ -47,14 +48,40 @@ public class RoomController : MonoBehaviour {
 
 			if (characterCounter >= tempCount) {
 
-				CloseDoor();
+				CloseEnterDoor();
 			}		
 		}
 	}
 
-	private void CloseDoor(){
-		door.SetActive (true);
+	void OnTriggerExit2D(Collider2D collider){
+		if (onPlatform) {
+			if (collider.gameObject.GetComponent<CharacterController> () != null) {
+				
+				if(!charactersCrossed.Contains(collider.gameObject.GetComponent<CharacterController> ())){
+					
+					
+					charactersCrossed.Remove(collider.gameObject.GetComponent<CharacterController> ());
+					
+					characterCounter -= 1;
+				}
+			}
+
+		}
+
+		if (characterCounter == 0) {
+			CloseExitDoor();
+		}
+	}
+
+	private void CloseEnterDoor(){
+		doorEnter.SetActive (true);
 
 		onPlatform = true;
+	}
+
+	private void CloseExitDoor(){
+		doorExit.SetActive (true);
+		
+		onPlatform = false;
 	}
 }
