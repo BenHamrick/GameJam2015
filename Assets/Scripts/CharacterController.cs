@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CharacterController : MonoBehaviour {
 
 	public static int playerCounter;
-    static CharacterController[] instancePrivate;
+    public static CharacterController[] instancePrivate;
 	public static CharacterController[] instance;
 
     public GameObject bullet;
@@ -52,11 +52,14 @@ public class CharacterController : MonoBehaviour {
 
     SpriteRenderer sprtieRenderer;
 
+    public GameObject grave; 
+
 	void Awake(){
         sprtieRenderer = GetComponent<SpriteRenderer>();
         xScale = transform.localScale.x;
 
-		if (instance == null) {
+        if (instance == null || instancePrivate.Length == 0)
+        {
             instancePrivate = new CharacterController[4];
 			instance = new CharacterController[4];
 			playerCounter = 0;
@@ -65,7 +68,14 @@ public class CharacterController : MonoBehaviour {
 			playerCounter += 1;
 		}
 
+        if (playerCounter >= 4)
+        {
+            playerCounter = 0;
+        }
+
 		playerIndex = playerCounter;
+
+        
 
         instancePrivate[playerCounter] = this;
 		instance [playerCounter] = this;
@@ -80,6 +90,10 @@ public class CharacterController : MonoBehaviour {
 
     void OnEnable()
     {
+        for (int i = 0; i < InputManager.Devices.Count; i++)
+        {
+            InputManager.Devices[i].Vibrate(0f,0f);
+        }
         if (instance[playerIndex] == null)
             transform.position = new Vector2(Camera.main.transform.position.x, Camera.main.transform.position.y);
         instance[playerIndex] = this;
@@ -247,20 +261,15 @@ public class CharacterController : MonoBehaviour {
         InputManager.Devices[playerIndex].Vibrate(0f, 0f);
     }
 
-	public int Hit(int damage){
+	public void Hit(int damage){
         StartCoroutine(vibrate());
 		PerlinShake.instance.PlayShake (shakeDuration, shakeSpeed, shakeMagnitude);
 
 		health -= damage;
-		if (health > 0) {
-			tempMoneyLoss = (int)(money * moneyPercentage);
-			
-			money -= tempMoneyLoss;
-
-			return tempMoneyLoss;
-		}
-		else{
-			return money;
+		if (health <= 0f) {
+            GameObject graveInstance = (GameObject)Instantiate(grave, transform.position, Quaternion.identity);
+            graveInstance.GetComponent<GraveController>().SetPlayer(this);
+            gameObject.SetActive(false);
 		}
 	}
 
