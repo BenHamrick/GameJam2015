@@ -11,7 +11,7 @@ public class RoomController : MonoBehaviour {
 	public GameObject doorEnter;
 	public GameObject doorExit;
 
-	private bool onPlatform = false;
+	public bool onPlatform = false;
 
 	private int tempCount = 0;
 
