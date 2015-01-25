@@ -1,0 +1,25 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: tentacle_in.png (4096 x 4096)
+# $TexturePacker:SmartUpdate:8de1c95037c3bb046fdd27c69e953eb5:e6b29a69290ed759a0399ecaf55915a8:d640bdcb33bd93174ef04b88b082431d$
+#
+
+tentacle_in_00000;2;2894;750;1200;0.5;0.5
+tentacle_in_00001;754;2894;750;1200;0.5;0.5
+tentacle_in_00002;1506;2894;750;1200;0.5;0.5
+tentacle_in_00003;2258;2894;750;1200;0.5;0.5
+tentacle_in_00004;3010;2894;750;1200;0.5;0.5
+tentacle_in_00005;2;1692;750;1200;0.5;0.5
+tentacle_in_00006;754;1692;750;1200;0.5;0.5
+tentacle_in_00007;1506;1692;750;1200;0.5;0.5
+tentacle_in_00008;2258;1692;750;1200;0.5;0.5
+tentacle_in_00009;3010;1692;750;1200;0.5;0.5
+tentacle_in_00010;2;490;750;1200;0.5;0.5
+tentacle_in_00011;754;490;750;1200;0.5;0.5
+tentacle_in_00012;1506;490;750;1200;0.5;0.5
+tentacle_in_00013;2258;490;750;1200;0.5;0.5
+tentacle_in_00014;3010;490;750;1200;0.5;0.5
