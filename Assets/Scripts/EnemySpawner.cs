@@ -6,6 +6,8 @@ public class EnemySpawner : MonoBehaviour {
     public int amountToSpawn;
     int amountSpawnd;
 
+    public RoomController roomController;
+
     public GameObject enemyToSpawn;
 
     float randomTime = 0f;
@@ -18,13 +20,16 @@ public class EnemySpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        time += Time.deltaTime;
-        if (time > randomTime && amountSpawnd < amountToSpawn)
+        if (roomController.onPlatform)
         {
-            amountSpawnd++;
-            Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
-            randomTime = Random.Range(.1f, 2f);
-            time = 0f;
+            time += Time.deltaTime;
+            if (time > randomTime && amountSpawnd < amountToSpawn)
+            {
+                amountSpawnd++;
+                Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
+                randomTime = Random.Range(.1f, 2f);
+                time = 0f;
+            }
         }
 	}
 }
