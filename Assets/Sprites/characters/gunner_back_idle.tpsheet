@@ -1,0 +1,29 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: gunner_back_idle.png (4096 x 4096)
+# $TexturePacker:SmartUpdate:eb8c0e2b657277c6b702d68fc5a0cb0f:74fd9083342973dadeaa3796152f1efd:d3045dea6cfb2040e44a3065ad07a010$
+#
+
+gunner_back_idle_00000;2;3354;854;740;0.5;0.5
+gunner_back_idle_00001;858;3354;854;740;0.5;0.5
+gunner_back_idle_00002;1714;3354;854;740;0.5;0.5
+gunner_back_idle_00018;1714;3354;854;740;0.5;0.5
+gunner_back_idle_00003;2570;3354;854;740;0.5;0.5
+gunner_back_idle_00017;2570;3354;854;740;0.5;0.5
+gunner_back_idle_00004;2;2612;854;740;0.5;0.5
+gunner_back_idle_00016;2;2612;854;740;0.5;0.5
+gunner_back_idle_00005;858;2612;854;740;0.5;0.5
+gunner_back_idle_00015;858;2612;854;740;0.5;0.5
+gunner_back_idle_00006;1714;2612;854;740;0.5;0.5
+gunner_back_idle_00014;1714;2612;854;740;0.5;0.5
+gunner_back_idle_00007;2570;2612;854;740;0.5;0.5
+gunner_back_idle_00013;2570;2612;854;740;0.5;0.5
+gunner_back_idle_00008;2;1870;854;740;0.5;0.5
+gunner_back_idle_00012;2;1870;854;740;0.5;0.5
+gunner_back_idle_00009;858;1870;854;740;0.5;0.5
+gunner_back_idle_00011;858;1870;854;740;0.5;0.5
+gunner_back_idle_00010;1714;1870;854;740;0.5;0.5

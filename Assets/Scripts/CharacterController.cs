@@ -48,6 +48,8 @@ public class CharacterController : MonoBehaviour {
 
     bool animatingUp;
 
+    public bool shotGun;
+
     SpriteRenderer sprtieRenderer;
 
 	void Awake(){
@@ -188,7 +190,10 @@ public class CharacterController : MonoBehaviour {
 	private void Shoot(){
 		if(InputManager.Devices [playerIndex].RightTrigger){
 			if(time < 0){
-				time = rateOfFire;
+                if (shotGun)
+                    time = rateOfFire * 2f;
+                else
+				    time = rateOfFire;
                 
 				if(aimDirection != Vector2.zero){
                     float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
@@ -200,6 +205,19 @@ public class CharacterController : MonoBehaviour {
                         weaponCount = 0;
                     aimDirection.Normalize();
                     bulletInstance.rigidbody2D.AddForce(aimDirection * 500f);
+
+                    if (shotGun)
+                    {
+                        angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
+                        bulletInstance = (GameObject)Instantiate(bullet, weapon[weaponCount].position, Quaternion.AngleAxis(angle, Vector3.forward));
+                        bulletInstance.GetComponent<SpriteRenderer>().color = bulletColor;
+                        bulletInstance.GetComponent<SpriteRenderer>().sortingOrder = sprtieRenderer.sortingOrder + 500;
+                        weaponCount++;
+                        if (weaponCount >= weapon.Length)
+                            weaponCount = 0;
+                        aimDirection.Normalize();
+                        bulletInstance.rigidbody2D.AddForce(aimDirection * 500f);
+                    }
 				}
 
 			}
