@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CharacterController : MonoBehaviour {
 
 	public static int playerCounter;
-    static CharacterController[] instancePrivate;
+    public static CharacterController[] instancePrivate;
 	public static CharacterController[] instance;
 
     public GameObject bullet;
@@ -48,13 +48,18 @@ public class CharacterController : MonoBehaviour {
 
     bool animatingUp;
 
+    public bool shotGun;
+
     SpriteRenderer sprtieRenderer;
+
+    public GameObject grave; 
 
 	void Awake(){
         sprtieRenderer = GetComponent<SpriteRenderer>();
         xScale = transform.localScale.x;
 
-		if (instance == null) {
+        if (instance == null || instancePrivate.Length == 0)
+        {
             instancePrivate = new CharacterController[4];
 			instance = new CharacterController[4];
 			playerCounter = 0;
@@ -63,7 +68,14 @@ public class CharacterController : MonoBehaviour {
 			playerCounter += 1;
 		}
 
+        if (playerCounter >= 4)
+        {
+            playerCounter = 0;
+        }
+
 		playerIndex = playerCounter;
+
+        
 
         instancePrivate[playerCounter] = this;
 		instance [playerCounter] = this;
@@ -78,6 +90,10 @@ public class CharacterController : MonoBehaviour {
 
     void OnEnable()
     {
+        for (int i = 0; i < InputManager.Devices.Count; i++)
+        {
+            InputManager.Devices[i].Vibrate(0f,0f);
+        }
         if (instance[playerIndex] == null)
             transform.position = new Vector2(Camera.main.transform.position.x, Camera.main.transform.position.y);
         instance[playerIndex] = this;
@@ -188,7 +204,10 @@ public class CharacterController : MonoBehaviour {
 	private void Shoot(){
 		if(InputManager.Devices [playerIndex].RightTrigger){
 			if(time < 0){
-				time = rateOfFire;
+                if (shotGun)
+                    time = rateOfFire * 2f;
+                else
+				    time = rateOfFire;
                 
 				if(aimDirection != Vector2.zero){
                     float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
@@ -200,6 +219,19 @@ public class CharacterController : MonoBehaviour {
                         weaponCount = 0;
                     aimDirection.Normalize();
                     bulletInstance.rigidbody2D.AddForce(aimDirection * 500f);
+
+                    if (shotGun)
+                    {
+                        angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
+                        bulletInstance = (GameObject)Instantiate(bullet, weapon[weaponCount].position, Quaternion.AngleAxis(angle, Vector3.forward));
+                        bulletInstance.GetComponent<SpriteRenderer>().color = bulletColor;
+                        bulletInstance.GetComponent<SpriteRenderer>().sortingOrder = sprtieRenderer.sortingOrder + 500;
+                        weaponCount++;
+                        if (weaponCount >= weapon.Length)
+                            weaponCount = 0;
+                        aimDirection.Normalize();
+                        bulletInstance.rigidbody2D.AddForce(aimDirection * 500f);
+                    }
 				}
 
 			}
@@ -229,20 +261,15 @@ public class CharacterController : MonoBehaviour {
         InputManager.Devices[playerIndex].Vibrate(0f, 0f);
     }
 
-	public int Hit(int damage){
+	public void Hit(int damage){
         StartCoroutine(vibrate());
 		PerlinShake.instance.PlayShake (shakeDuration, shakeSpeed, shakeMagnitude);
 
 		health -= damage;
-		if (health > 0) {
-			tempMoneyLoss = (int)(money * moneyPercentage);
-			
-			money -= tempMoneyLoss;
-
-			return tempMoneyLoss;
-		}
-		else{
-			return money;
+		if (health <= 0f) {
+            GameObject graveInstance = (GameObject)Instantiate(grave, transform.position, Quaternion.identity);
+            graveInstance.GetComponent<GraveController>().SetPlayer(this);
+            gameObject.SetActive(false);
 		}
 	}
 
