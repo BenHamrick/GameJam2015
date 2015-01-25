@@ -84,4 +84,9 @@ public class RoomController : MonoBehaviour {
 		
 		onPlatform = false;
 	}
+
+	public void OpenExitDoor(){
+		doorExit.SetActive (false);
+
+	}
 }
