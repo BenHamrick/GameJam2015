@@ -10,6 +10,7 @@ public class CharacterController : MonoBehaviour {
 	public static CharacterController[] instance;
 
     public GameObject bullet;
+    public Color bulletColor;
 
 	public int playerIndex;
 	public int money;
@@ -192,6 +193,7 @@ public class CharacterController : MonoBehaviour {
 				if(aimDirection != Vector2.zero){
                     float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
                     GameObject bulletInstance = (GameObject)Instantiate(bullet, weapon[weaponCount].position, Quaternion.AngleAxis(angle, Vector3.forward));
+                    bulletInstance.GetComponent<SpriteRenderer>().color = bulletColor;
                     bulletInstance.GetComponent<SpriteRenderer>().sortingOrder = sprtieRenderer.sortingOrder + 500;
                     weaponCount++;
                     if (weaponCount >= weapon.Length)
