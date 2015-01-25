@@ -36,7 +36,7 @@ public class EnemyController : MonoBehaviour {
         {
             time = Random.Range(.75f, 2f);
             characterToHunt = findCharacterTochase();
-            if(characterToHunt.transform != null)
+            if (characterToHunt.transform != null && characterToHunt != null)
                 agent.SetDestination(characterToHunt.transform.position);
         }
 	}
