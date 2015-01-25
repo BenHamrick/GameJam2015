@@ -1,0 +1,14 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: enemy_death.png (4096 x 4096)
+# $TexturePacker:SmartUpdate:abc46d063182ae578e9d2fdc0ffe9d74:83fa927ed57c3fd1f8a0e69125f04a19:ec25e08e8c864c58e511507caf133788$
+#
+
+enemy_death_01;2;2656;1438;1438;0.5;0.5
+enemy_death_02;1442;2656;1438;1438;0.5;0.5
+enemy_death_03;2;1216;1438;1438;0.5;0.5
+enemy_death_04;1442;1216;1438;1438;0.5;0.5
