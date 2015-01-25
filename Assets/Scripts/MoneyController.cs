@@ -3,13 +3,30 @@ using System.Collections;
 
 public class MoneyController : MonoBehaviour {
 
+    bool didGet;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Player")
         {
-            Vector2 direction = other.transform.position - transform.position;
-            direction.Normalize();
-            rigidbody2D.AddForce(direction * 100f);
+            if (!didGet)
+            {
+                didGet = true;
+                StartCoroutine(goTo(other.transform));
+            }
+        }
+    }
+
+    IEnumerator goTo(Transform position)
+    {
+        float time = 0f;
+        while (true)
+        {
+            time += Time.deltaTime;
+            if (time > 1f)
+                time = 1f;
+            transform.position = Vector2.Lerp(transform.position, position.position, time);
+            yield return null;
         }
     }
 }
