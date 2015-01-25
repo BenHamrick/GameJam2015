@@ -1,0 +1,54 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: currency_skull.png (2048 x 2048)
+# $TexturePacker:SmartUpdate:92b4e5d43b5e40315ee8a291c24cb2d2:de2637a1bd1a07d5d05f5d40721eb6e6:18d268742ef0a0e244f4b4c9f5045171$
+#
+
+currency_skull_00000;2;1696;200;350;0.5;0.5
+currency_skull_00001;204;1696;200;350;0.5;0.5
+currency_skull_00002;406;1696;200;350;0.5;0.5
+currency_skull_00003;608;1696;200;350;0.5;0.5
+currency_skull_00004;810;1696;200;350;0.5;0.5
+currency_skull_00005;1012;1696;200;350;0.5;0.5
+currency_skull_00006;1214;1696;200;350;0.5;0.5
+currency_skull_00007;1416;1696;200;350;0.5;0.5
+currency_skull_00008;1618;1696;200;350;0.5;0.5
+currency_skull_00009;1820;1696;200;350;0.5;0.5
+currency_skull_00010;2;1344;200;350;0.5;0.5
+currency_skull_00011;204;1344;200;350;0.5;0.5
+currency_skull_00012;406;1344;200;350;0.5;0.5
+currency_skull_00013;608;1344;200;350;0.5;0.5
+currency_skull_00014;810;1344;200;350;0.5;0.5
+currency_skull_00015;1012;1344;200;350;0.5;0.5
+currency_skull_00016;1214;1344;200;350;0.5;0.5
+currency_skull_00017;1416;1344;200;350;0.5;0.5
+currency_skull_00018;1618;1344;200;350;0.5;0.5
+currency_skull_00019;1820;1344;200;350;0.5;0.5
+currency_skull_00020;2;992;200;350;0.5;0.5
+currency_skull_00021;204;992;200;350;0.5;0.5
+currency_skull_00022;406;992;200;350;0.5;0.5
+currency_skull_00023;608;992;200;350;0.5;0.5
+currency_skull_00024;810;992;200;350;0.5;0.5
+currency_skull_00025;1012;992;200;350;0.5;0.5
+currency_skull_00026;1214;992;200;350;0.5;0.5
+currency_skull_00027;1416;992;200;350;0.5;0.5
+currency_skull_00028;1618;992;200;350;0.5;0.5
+currency_skull_00029;1820;992;200;350;0.5;0.5
+currency_skull_00030;2;640;200;350;0.5;0.5
+currency_skull_00031;204;640;200;350;0.5;0.5
+currency_skull_00032;406;640;200;350;0.5;0.5
+currency_skull_00033;608;640;200;350;0.5;0.5
+currency_skull_00034;810;640;200;350;0.5;0.5
+currency_skull_00035;1012;640;200;350;0.5;0.5
+currency_skull_00036;1214;640;200;350;0.5;0.5
+currency_skull_00037;1416;640;200;350;0.5;0.5
+currency_skull_00038;1618;640;200;350;0.5;0.5
+currency_skull_00039;1820;640;200;350;0.5;0.5
+currency_skull_00040;2;288;200;350;0.5;0.5
+currency_skull_00041;204;288;200;350;0.5;0.5
+currency_skull_00042;406;288;200;350;0.5;0.5
+currency_skull_00043;608;288;200;350;0.5;0.5
