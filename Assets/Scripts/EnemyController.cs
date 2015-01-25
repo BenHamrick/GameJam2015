@@ -14,6 +14,8 @@ public class EnemyController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        float random = Random.Range(.1f, .4f);
+        transform.localScale = new Vector2(random, random);
         agent = GetComponent<PolyNavAgent>();
 	    if(Random.Range(0,100) > 50)
         {
@@ -26,7 +28,7 @@ public class EnemyController : MonoBehaviour {
         time -= Time.deltaTime;
         if(time < 0f)
         {
-            time = Random.Range(.5f, 1f);
+            time = Random.Range(.75f, 2f);
             characterToHunt = findCharacterTochase();
             agent.SetDestination(characterToHunt.transform.position);
         }
@@ -34,7 +36,7 @@ public class EnemyController : MonoBehaviour {
 
     public void Hit(int amount)
     {
-        GetComponent<SpriteRenderer>().color = Color.grey;
+        GetComponent<SpriteRenderer>().color = Color.gray;
         if (!didGetHit)
         {
             didGetHit = true;
@@ -49,7 +51,7 @@ public class EnemyController : MonoBehaviour {
 
     IEnumerator gotHit()
     {
-        yield return new WaitForSeconds(.01f);
+        yield return new WaitForSeconds(.1f);
         GetComponent<SpriteRenderer>().color = Color.white;
         didGetHit = false;
     }
