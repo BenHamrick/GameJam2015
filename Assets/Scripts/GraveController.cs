@@ -9,13 +9,18 @@ public class GraveController : MonoBehaviour {
     CharacterController playerDoingReviving;
     int reviveState;
 
+    public Sprite graveNormal;
+    public Sprite graveRevive;
+
     public Slider slider;
 
     float time;
 
+    SpriteRenderer spriteRenderer;
+
 	// Use this for initialization
 	void Start () {
-	
+        spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -25,6 +30,7 @@ public class GraveController : MonoBehaviour {
         {
             if (time > .1f)
             {
+                spriteRenderer.sprite = graveRevive;
                 time = 0f;
                 slider.value = reviveState;
                 reviveState+=5;
@@ -32,6 +38,7 @@ public class GraveController : MonoBehaviour {
         }
         else
         {
+            spriteRenderer.sprite = graveNormal;
             slider.value = reviveState;
             reviveState = 0;
         }
