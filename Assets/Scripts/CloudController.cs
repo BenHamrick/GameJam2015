@@ -17,8 +17,8 @@ public class CloudController : MonoBehaviour {
         time-=Time.deltaTime;
 	    if(time < 0f)
         {
-            time = Random.Range(4f, 7f);
-            Instantiate(clouds[Random.Range(0,clouds.Length - 1)], (Vector2)transform.position + new Vector2(50f, 0f) + (Random.insideUnitCircle *  10f), Quaternion.identity);
+            time = Random.Range(0f, 4f);
+            Instantiate(clouds[Random.Range(0,clouds.Length - 1)], (Vector2)transform.position + new Vector2(20f, 0f) + (Random.insideUnitCircle *  10f), Quaternion.identity);
         }
 	}
 }

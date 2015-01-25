@@ -4,6 +4,9 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: clouds_0
     21300002: clouds_1
+    21300004: clouds_2
+    21300006: clouds_2
+    21300008: clouds_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -49,19 +52,39 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 593
-        height: 473
+        y: 336
+        width: 525
+        height: 283
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: clouds_1
+    - name: clouds_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1071
+        x: 305
+        y: 595
+        width: 1316
+        height: 479
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: clouds_2
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 5
+        width: 716
+        height: 561
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: clouds_3
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 50
+        width: 269
+        height: 324
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
