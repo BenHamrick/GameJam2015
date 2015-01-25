@@ -12,6 +12,8 @@ public class EnemyController : MonoBehaviour {
 
     public float health;
 
+	public int island;
+
 	// Use this for initialization
 	void Start () {
         float random = Random.Range(.1f, .4f);
@@ -45,6 +47,8 @@ public class EnemyController : MonoBehaviour {
         health -= amount;
         if(health <= 0f)
         {
+
+			Stats.instance.EnemyKilled(island);
             Destroy(gameObject);
         }
     }

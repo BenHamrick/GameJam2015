@@ -13,6 +13,8 @@ public class EnemySpawner : MonoBehaviour {
     float randomTime = 0f;
     float time = 0f;
 
+	public int island;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -26,7 +28,8 @@ public class EnemySpawner : MonoBehaviour {
             if (time > randomTime && amountSpawnd < amountToSpawn)
             {
                 amountSpawnd++;
-                Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
+                GameObject temp = (GameObject)Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
+				temp.GetComponent<EnemyController>().island = island;
                 randomTime = Random.Range(.1f, 2f);
                 time = 0f;
             }
