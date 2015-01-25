@@ -1,0 +1,212 @@
+fileFormatVersion: 2
+guid: 4ee7d09b9e7e79c41b48c3f102335deb
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: tentacle_in_00000
+    21300002: tentacle_in_00001
+    21300004: tentacle_in_00002
+    21300006: tentacle_in_00003
+    21300008: tentacle_in_00004
+    21300010: tentacle_in_00005
+    21300012: tentacle_in_00006
+    21300014: tentacle_in_00007
+    21300016: tentacle_in_00008
+    21300018: tentacle_in_00009
+    21300020: tentacle_in_00010
+    21300022: tentacle_in_00011
+    21300024: tentacle_in_00012
+    21300026: tentacle_in_00013
+    21300028: tentacle_in_00014
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: tentacle_in_00000
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2894
+        width: 750
+        height: 1200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_in_00001
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 2894
+        width: 750
+        height: 1200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_in_00002
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 2894
+        width: 750
+        height: 1200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_in_00003
+      rect:
+        serializedVersion: 2
+        x: 2258
+        y: 2894
+        width: 750
+        height: 1200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_in_00004
+      rect:
+        serializedVersion: 2
+        x: 3010
+        y: 2894
+        width: 750
+        height: 1200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_in_00005
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1692
+        width: 750
+        height: 1200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_in_00006
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1692
+        width: 750
+        height: 1200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_in_00007
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 1692
+        width: 750
+        height: 1200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_in_00008
+      rect:
+        serializedVersion: 2
+        x: 2258
+        y: 1692
+        width: 750
+        height: 1200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_in_00009
+      rect:
+        serializedVersion: 2
+        x: 3010
+        y: 1692
+        width: 750
+        height: 1200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_in_00010
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 490
+        width: 750
+        height: 1200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_in_00011
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 490
+        width: 750
+        height: 1200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_in_00012
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 490
+        width: 750
+        height: 1200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_in_00013
+      rect:
+        serializedVersion: 2
+        x: 2258
+        y: 490
+        width: 750
+        height: 1200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_in_00014
+      rect:
+        serializedVersion: 2
+        x: 3010
+        y: 490
+        width: 750
+        height: 1200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
