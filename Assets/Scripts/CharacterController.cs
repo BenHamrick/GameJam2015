@@ -199,7 +199,15 @@ public class CharacterController : MonoBehaviour {
 		money = 0;
 	}
 
+    IEnumerator vibrate()
+    {
+        InputManager.Devices[playerIndex].Vibrate(1f, 1f);
+        yield return new WaitForSeconds(shakeDuration);
+        InputManager.Devices[playerIndex].Vibrate(0f, 0f);
+    }
+
 	public int Hit(int damage){
+        StartCoroutine(vibrate());
 		PerlinShake.instance.PlayShake (shakeDuration, shakeSpeed, shakeMagnitude);
 
 		health -= damage;
