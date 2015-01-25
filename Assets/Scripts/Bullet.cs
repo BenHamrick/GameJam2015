@@ -27,14 +27,23 @@ public class Bullet : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         EnemyController controller = other.GetComponent<EnemyController>();
+		BossController bossController = other.GetComponent<BossController> ();
         if (controller != null)
         {
             controller.Hit(damage);
         }
+
+		if (bossController != null) {
+			bossController.Hit(damage);
+		}
         if (bulletHit != null)
         {
             ((GameObject)Instantiate(bulletHit, transform.position, transform.rotation)).GetComponent<SpriteRenderer>().color = spriteRenderer.color;
         }
         Destroy(gameObject);
+
+
+
+
     }
 }

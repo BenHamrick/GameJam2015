@@ -8,18 +8,40 @@ public class BossController : MonoBehaviour {
 
 	public float maxHealth;
 
-	public List<GameObject> tenList;
+	public float healthPercentage;
 
-	public List<GameObject> hoardSpawners;
+	bool didGetHit;
 
-	public 
+
 	// Use this for initialization
-	void Start () {
-	
+	void Awake () {
+		health = maxHealth;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		healthPercentage = health / maxHealth;
+
 	}
+
+	public void Hit(int damage){
+		health -= damage;
+
+		GetComponent<SpriteRenderer>().color = Color.gray;
+		if (!didGetHit)
+		{
+			didGetHit = true;
+			StartCoroutine(gotHit());
+		}
+	}
+
+	IEnumerator gotHit()
+	{
+
+		yield return new WaitForSeconds(.1f);
+		GetComponent<SpriteRenderer>().color = Color.white;
+
+		didGetHit = false;
+	}
+
 }
