@@ -41,18 +41,18 @@ public class BossTriggerController : MonoBehaviour {
 	void Update () {
 
 		if (bossFight) {
-			if (bossController.healthPercentage < 0.75F && bossController.healthPercentage > 0.5F && hoardsSpawned == 0) {
+			if (bossController.healthPercentage < 0.75F && hoardsSpawned == 0) {
 				hoardSpawners[0].SetActive(true);
 				hoardsSpawned = 1;
 			}
 			
-			if (bossController.healthPercentage < 0.5F && bossController.healthPercentage > 0.25F && hoardsSpawned == 1) {
+			if (bossController.healthPercentage < 0.5F  && hoardsSpawned == 1) {
 				hoardSpawners[1].SetActive(true);
 				
 				hoardsSpawned = 2;
 			}
 			
-			if (bossController.healthPercentage < 0.25F && bossController.healthPercentage > 0.0F && hoardsSpawned == 2) {
+			if (bossController.healthPercentage < 0.25F && hoardsSpawned == 2) {
 				hoardSpawners[2].SetActive(true);
 				
 				hoardsSpawned = 3;

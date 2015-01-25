@@ -18,7 +18,7 @@ public class MusicController : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-		audio.PlayOneShot (defaultMusic);
+		//audio.PlayOneShot (defaultMusic);
 	}
 	
 	// Update is called once per frame
