@@ -15,6 +15,8 @@ public class RoomController : MonoBehaviour {
 
 	private int tempCount = 0;
 
+	private bool challengeComplete = false;
+
 	void Awake(){
 		characterCounter = 0;
 		charactersCrossed = new List<CharacterController> ();
@@ -54,10 +56,10 @@ public class RoomController : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D(Collider2D collider){
-		if (onPlatform) {
+		if (challengeComplete) {
 			if (collider.gameObject.GetComponent<CharacterController> () != null) {
 				
-				if(!charactersCrossed.Contains(collider.gameObject.GetComponent<CharacterController> ())){
+				if(charactersCrossed.Contains(collider.gameObject.GetComponent<CharacterController> ())){
 					
 					
 					charactersCrossed.Remove(collider.gameObject.GetComponent<CharacterController> ());
@@ -69,6 +71,8 @@ public class RoomController : MonoBehaviour {
 		}
 
 		if (characterCounter == 0) {
+
+			print ("Close Exit Door");
 			CloseExitDoor();
 		}
 	}
@@ -86,6 +90,7 @@ public class RoomController : MonoBehaviour {
 	}
 
 	public void OpenExitDoor(){
+		challengeComplete = true;
 		doorExit.SetActive (false);
 
 	}
