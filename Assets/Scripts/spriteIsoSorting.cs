@@ -17,7 +17,7 @@ public class spriteIsoSorting : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         time += Time.deltaTime;
-        if (time > .1f)
+        if (time > .05f)
         {
             if (layer != -(int)((collider2D.bounds.center.y - collider2D.bounds.extents.y) * 100f))
             {

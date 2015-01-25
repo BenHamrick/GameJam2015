@@ -6,11 +6,13 @@ public class Bullet : MonoBehaviour {
     public GameObject bulletHit;
     public int damage;
 
+    SpriteRenderer spriteRenderer;
+
     float time;
 
 	// Use this for initialization
 	void Start () {
-	
+        spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -31,7 +33,7 @@ public class Bullet : MonoBehaviour {
         }
         if (bulletHit != null)
         {
-            Instantiate(bulletHit, transform.position, transform.rotation);
+            ((GameObject)Instantiate(bulletHit, transform.position, transform.rotation)).GetComponent<SpriteRenderer>().color = spriteRenderer.color;
         }
         Destroy(gameObject);
     }
