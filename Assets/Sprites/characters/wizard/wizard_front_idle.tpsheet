@@ -1,0 +1,40 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# Sprite sheet: wizard_front_idle.png (4096 x 2048)
+# $TexturePacker:SmartUpdate:b87a835309dbbde7f2c76b0f3684b587:882cf1951b0092757fa1841fa1dc2e49:0442b66943d9a39316dba92b93d9fb86$
+#
+
+wizard_front_idle_00000;2;1546;350;500;0.5;0.5
+wizard_front_idle_00001;354;1546;350;500;0.5;0.5
+wizard_front_idle_00002;706;1546;350;500;0.5;0.5
+wizard_front_idle_00003;1058;1546;350;500;0.5;0.5
+wizard_front_idle_00004;1410;1546;350;500;0.5;0.5
+wizard_front_idle_00005;1762;1546;350;500;0.5;0.5
+wizard_front_idle_00006;2114;1546;350;500;0.5;0.5
+wizard_front_idle_00007;2466;1546;350;500;0.5;0.5
+wizard_front_idle_00008;2818;1546;350;500;0.5;0.5
+wizard_front_idle_00009;3170;1546;350;500;0.5;0.5
+wizard_front_idle_00010;3522;1546;350;500;0.5;0.5
+wizard_front_idle_00011;2;1044;350;500;0.5;0.5
+wizard_front_idle_00012;354;1044;350;500;0.5;0.5
+wizard_front_idle_00013;706;1044;350;500;0.5;0.5
+wizard_front_idle_00014;1058;1044;350;500;0.5;0.5
+wizard_front_idle_00015;1410;1044;350;500;0.5;0.5
+wizard_front_idle_00016;1762;1044;350;500;0.5;0.5
+wizard_front_idle_00017;2114;1044;350;500;0.5;0.5
+wizard_front_idle_00018;2466;1044;350;500;0.5;0.5
+wizard_front_idle_00019;2818;1044;350;500;0.5;0.5
+wizard_front_idle_00020;3170;1044;350;500;0.5;0.5
+wizard_front_idle_00021;3522;1044;350;500;0.5;0.5
+wizard_front_idle_00022;2;542;350;500;0.5;0.5
+wizard_front_idle_00023;354;542;350;500;0.5;0.5
+wizard_front_idle_00024;706;542;350;500;0.5;0.5
+wizard_front_idle_00025;1058;542;350;500;0.5;0.5
+wizard_front_idle_00026;1410;542;350;500;0.5;0.5
+wizard_front_idle_00027;1762;542;350;500;0.5;0.5
+wizard_front_idle_00028;2114;542;350;500;0.5;0.5
+wizard_front_idle_00029;2466;542;350;500;0.5;0.5
