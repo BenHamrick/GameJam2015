@@ -25,13 +25,15 @@ public class MusicController : MonoBehaviour {
 	void Update () {
 		if (!bossSeen) {
 			if (!audio.isPlaying) {
-				audio.PlayOneShot (defaultMusic);
+				audio.clip = defaultMusic;
+				audio.Play ();
 			}	
 		}
 
 		else {
 			if (!audio.isPlaying) {
-				audio.PlayOneShot (bossMusic);
+				audio.clip = bossMusic;
+				audio.Play ();
 			}	
 		}
 
@@ -39,7 +41,8 @@ public class MusicController : MonoBehaviour {
 
 	public void BossSeen(){
 		audio.Stop ();
-		audio.PlayOneShot (bossSeenMusic);
+		audio.clip = bossSeenMusic;
+		audio.Play ();
 		bossSeen = true;
 	}
 }
