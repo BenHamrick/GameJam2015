@@ -1,0 +1,421 @@
+fileFormatVersion: 2
+guid: cbd45c944998645e78caa2a9c4970b59
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: tentacle_idle_00015
+    21300002: tentacle_idle_00016
+    21300004: tentacle_idle_00017
+    21300006: tentacle_idle_00018
+    21300008: tentacle_idle_00019
+    21300010: tentacle_idle_00020
+    21300012: tentacle_idle_00021
+    21300014: tentacle_idle_00022
+    21300016: tentacle_idle_00023
+    21300018: tentacle_idle_00024
+    21300020: tentacle_idle_00025
+    21300022: tentacle_idle_00026
+    21300024: tentacle_idle_00027
+    21300026: tentacle_idle_00028
+    21300028: tentacle_idle_00029
+    21300030: tentacle_idle_00030
+    21300032: tentacle_idle_00031
+    21300034: tentacle_idle_00032
+    21300036: tentacle_idle_00033
+    21300038: tentacle_idle_00034
+    21300040: tentacle_idle_00035
+    21300042: tentacle_idle_00036
+    21300044: tentacle_idle_00037
+    21300046: tentacle_idle_00038
+    21300048: tentacle_idle_00039
+    21300050: tentacle_idle_00040
+    21300052: tentacle_idle_00041
+    21300054: tentacle_idle_00042
+    21300056: tentacle_idle_00043
+    21300058: tentacle_idle_00044
+    21300060: tentacle_idle_00045
+    21300062: tentacle_idle_00046
+    21300064: tentacle_idle_00047
+    21300066: tentacle_idle_00048
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: tentacle_idle_00015
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3176
+        width: 354
+        height: 918
+      alignment: 9
+      pivot: {x: .432203382, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00016
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1345
+        width: 363
+        height: 912
+      alignment: 9
+      pivot: {x: .4214876, y: .503289461}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00017
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 3196
+        width: 368
+        height: 898
+      alignment: 9
+      pivot: {x: .415760875, y: .511135876}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00018
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 2311
+        width: 371
+        height: 883
+      alignment: 9
+      pivot: {x: .412398934, y: .519818783}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00019
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 522
+        width: 372
+        height: 871
+      alignment: 9
+      pivot: {x: .411290318, y: .52698046}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00020
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 2357
+        width: 375
+        height: 864
+      alignment: 9
+      pivot: {x: .416000009, y: .53125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00021
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 1498
+        width: 379
+        height: 857
+      alignment: 9
+      pivot: {x: .424802125, y: .535589278}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00022
+      rect:
+        serializedVersion: 2
+        x: 2391
+        y: 3242
+        width: 383
+        height: 852
+      alignment: 9
+      pivot: {x: .43342036, y: .538732409}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00023
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 1526
+        width: 387
+        height: 849
+      alignment: 9
+      pivot: {x: .444444448, y: .540636063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00024
+      rect:
+        serializedVersion: 2
+        x: 2009
+        y: 2377
+        width: 390
+        height: 853
+      alignment: 9
+      pivot: {x: .453846157, y: .538100839}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00025
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 528
+        width: 393
+        height: 865
+      alignment: 9
+      pivot: {x: .463104337, y: .530635834}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00026
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 3212
+        width: 396
+        height: 882
+      alignment: 9
+      pivot: {x: .472222209, y: .520408154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00027
+      rect:
+        serializedVersion: 2
+        x: 1991
+        y: 3232
+        width: 398
+        height: 862
+      alignment: 9
+      pivot: {x: .44723618, y: .532482624}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00028
+      rect:
+        serializedVersion: 2
+        x: 2401
+        y: 2397
+        width: 398
+        height: 843
+      alignment: 9
+      pivot: {x: .422110558, y: .54448396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00029
+      rect:
+        serializedVersion: 2
+        x: 3229
+        y: 3267
+        width: 402
+        height: 827
+      alignment: 9
+      pivot: {x: .402985066, y: .555018127}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00030
+      rect:
+        serializedVersion: 2
+        x: 3653
+        y: 1638
+        width: 407
+        height: 812
+      alignment: 9
+      pivot: {x: .3857494, y: .56527096}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00031
+      rect:
+        serializedVersion: 2
+        x: 3239
+        y: 1638
+        width: 412
+        height: 812
+      alignment: 9
+      pivot: {x: .371359229, y: .566502452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00032
+      rect:
+        serializedVersion: 2
+        x: 3633
+        y: 2452
+        width: 420
+        height: 817
+      alignment: 9
+      pivot: {x: .364285707, y: .563035488}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00033
+      rect:
+        serializedVersion: 2
+        x: 3633
+        y: 3271
+        width: 428
+        height: 823
+      alignment: 9
+      pivot: {x: .357476622, y: .558930755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00034
+      rect:
+        serializedVersion: 2
+        x: 2801
+        y: 2421
+        width: 436
+        height: 829
+      alignment: 9
+      pivot: {x: .350917429, y: .554885387}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00035
+      rect:
+        serializedVersion: 2
+        x: 2483
+        y: 1560
+        width: 443
+        height: 835
+      alignment: 9
+      pivot: {x: .345372468, y: .550898194}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00036
+      rect:
+        serializedVersion: 2
+        x: 2776
+        y: 3252
+        width: 451
+        height: 842
+      alignment: 9
+      pivot: {x: .34368071, y: .546318293}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00037
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 647
+        width: 464
+        height: 849
+      alignment: 9
+      pivot: {x: .346982747, y: .54181391}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00038
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 607
+        width: 476
+        height: 857
+      alignment: 9
+      pivot: {x: .348739505, y: .536756098}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00039
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 1466
+        width: 490
+        height: 864
+      alignment: 9
+      pivot: {x: .353061229, y: .532407403}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00040
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 3223
+        width: 475
+        height: 871
+      alignment: 9
+      pivot: {x: .353684217, y: .528128564}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00041
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 2332
+        width: 459
+        height: 878
+      alignment: 9
+      pivot: {x: .355119824, y: .523917973}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00042
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 1395
+        width: 443
+        height: 885
+      alignment: 9
+      pivot: {x: .356659144, y: .51977402}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00043
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 459
+        width: 428
+        height: 892
+      alignment: 9
+      pivot: {x: .357476622, y: .515695095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00044
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 2282
+        width: 417
+        height: 898
+      alignment: 9
+      pivot: {x: .366906464, y: .51224947}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00045
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1353
+        width: 407
+        height: 904
+      alignment: 9
+      pivot: {x: .375921369, y: .508849561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00046
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 434
+        width: 396
+        height: 909
+      alignment: 9
+      pivot: {x: .386363626, y: .506050587}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00047
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 3182
+        width: 386
+        height: 912
+      alignment: 9
+      pivot: {x: .396373063, y: .503289461}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tentacle_idle_00048
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2259
+        width: 375
+        height: 915
+      alignment: 9
+      pivot: {x: .407999992, y: .501639366}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
