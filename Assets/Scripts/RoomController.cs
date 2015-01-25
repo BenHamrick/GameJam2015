@@ -60,10 +60,39 @@ public class RoomController : MonoBehaviour {
 				CloseEnterDoor();
 			}		
 		}
+
+		if(onPlatform && challengeComplete){
+
+			if (collider.gameObject.GetComponent<CharacterController> () != null) {
+				
+				if(!charactersCrossed.Contains(collider.gameObject.GetComponent<CharacterController> ())){
+					
+					
+					charactersCrossed.Add(collider.gameObject.GetComponent<CharacterController> ());
+					
+					characterCounter += 1;
+				}
+			}
+		}
 	}
 
 	void OnTriggerExit2D(Collider2D collider){
-		if (challengeComplete) {
+
+		if (onPlatform && challengeComplete) {
+			if (collider.gameObject.GetComponent<CharacterController> () != null) {
+				
+				if(charactersCrossed.Contains(collider.gameObject.GetComponent<CharacterController> ())){
+					
+					
+					charactersCrossed.Remove(collider.gameObject.GetComponent<CharacterController> ());
+					
+					characterCounter -= 1;
+				}
+			}
+
+		}
+
+		if (!onPlatform && !challengeComplete) {
 			if (collider.gameObject.GetComponent<CharacterController> () != null) {
 				
 				if(charactersCrossed.Contains(collider.gameObject.GetComponent<CharacterController> ())){
