@@ -153,11 +153,18 @@ public class BossTriggerController : MonoBehaviour {
 	
 	private void BossFight(bool fight){
 		bossFight = fight;
-		
-		for(int i = 0; i < tenList.Count; i += 1){
-			tenList[i].SetActive(fight);
-		}
+
+        StartCoroutine(activate(fight));
 		
 		
 	}
+
+    IEnumerator activate(bool fight)
+    {
+        for (int i = 0; i < tenList.Count; i += 1)
+        {
+            yield return new WaitForSeconds(Random.Range(0f, 2f));
+            tenList[i].SetActive(fight);
+        }
+    }
 }
