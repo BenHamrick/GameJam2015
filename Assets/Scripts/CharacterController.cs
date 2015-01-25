@@ -246,4 +246,14 @@ public class CharacterController : MonoBehaviour {
 		}
 	}
 
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Money")
+        {
+            money++;
+            Destroy(coll.gameObject);
+        }
+
+    }
+
 }

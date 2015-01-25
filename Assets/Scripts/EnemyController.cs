@@ -8,6 +8,8 @@ public class EnemyController : MonoBehaviour {
     PolyNavAgent agent;
     CharacterController characterToHunt = null;
 
+    public GameObject moneyObject;
+
     bool didGetHit;
 
     public float health;
@@ -47,7 +49,12 @@ public class EnemyController : MonoBehaviour {
         health -= amount;
         if(health <= 0f)
         {
-
+            int length = Random.Range(5, 10);
+            for (int i = 0; i < length; i++)
+            {
+                GameObject moneyGameObject = (GameObject)Instantiate(moneyObject, transform.position, Quaternion.identity);
+                moneyGameObject.rigidbody2D.AddForce(Random.insideUnitCircle * 2000f);
+            }
 			Stats.instance.EnemyKilled(island);
             Destroy(gameObject);
         }
