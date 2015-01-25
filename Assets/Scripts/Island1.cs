@@ -11,7 +11,7 @@ public class Island1 : MonoBehaviour {
 
 	void Update(){
 	
-		if (Stats.instance.GetEnemyKilled (island) >= deadEnemyNumber) {
+		if (Stats.instance.GetEnemyKilled (island) >= deadEnemyNumber && roomController.onPlatform) {
 			roomController.OpenExitDoor();
 		}
 	}
