@@ -8,6 +8,8 @@ public class Bullet : MonoBehaviour {
 
     SpriteRenderer spriteRenderer;
 
+    public bool isEnemy;
+
     float time;
 
 	// Use this for initialization
@@ -26,16 +28,33 @@ public class Bullet : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        EnemyController controller = other.GetComponent<EnemyController>();
-		BossController bossController = other.GetComponent<BossController> ();
-        if (controller != null)
+        if (!isEnemy)
         {
-            controller.Hit(damage);
-        }
+            EnemyController controller = other.GetComponent<EnemyController>();
+            BossController bossController = other.GetComponent<BossController>();
+            TenticalController tenticalController = other.GetComponent<TenticalController>();
+            if (tenticalController != null)
+            {
+                tenticalController.Hit(damage);
+            }
+            if (controller != null)
+            {
+                controller.Hit(damage);
+            }
 
-		if (bossController != null) {
-			bossController.Hit(damage);
-		}
+            if (bossController != null)
+            {
+                bossController.Hit(damage);
+            }
+        }
+        else
+        {
+            CharacterController character = other.GetComponent<CharacterController>();
+            if(character != null)
+            {
+                character.Hit(damage);
+            }
+        }
         if (bulletHit != null)
         {
             ((GameObject)Instantiate(bulletHit, transform.position, transform.rotation)).GetComponent<SpriteRenderer>().color = spriteRenderer.color;
