@@ -11,24 +11,31 @@ public class RoomController : MonoBehaviour {
 	public GameObject doorEnter;
 	public GameObject doorExit;
 
+	public GameObject doorEnterBeam;
+	public GameObject doorExitBeam;
+
 	public bool onPlatform = false;
 
 	private int tempCount = 0;
 
 	private bool challengeComplete = false;
 
+	public GameObject polyNav;
+
 	void Awake(){
 		characterCounter = 0;
 		charactersCrossed = new List<CharacterController> ();
 
 		doorEnter.SetActive (false);
+		doorEnterBeam.SetActive (false);
 
 		doorExit.SetActive (true);
+		doorExitBeam.SetActive (true);
 	}
 
 	void OnTriggerEnter2D(Collider2D collider){
 
-		if (!onPlatform) {
+		if (!onPlatform && !challengeComplete) {
 			if (collider.gameObject.GetComponent<CharacterController> () != null) {
 
 				if(!charactersCrossed.Contains(collider.gameObject.GetComponent<CharacterController> ())){
@@ -72,26 +79,35 @@ public class RoomController : MonoBehaviour {
 
 		if (characterCounter == 0) {
 
-			print ("Close Exit Door");
+
 			CloseExitDoor();
 		}
 	}
 
 	private void CloseEnterDoor(){
 		doorEnter.SetActive (true);
+		doorEnterBeam.SetActive (true);
+
 
 		onPlatform = true;
 	}
 
 	private void CloseExitDoor(){
+		print ("Close Exit Door");
 		doorExit.SetActive (true);
-		
+		doorExitBeam.SetActive (true);
+
 		onPlatform = false;
 	}
 
 	public void OpenExitDoor(){
-		challengeComplete = true;
-		doorExit.SetActive (false);
+		if (!challengeComplete) {
+			print ("Open Exit Door");
+			challengeComplete = true;
+			doorExit.SetActive (false);
+			doorExitBeam.SetActive (false);		
+		}
+
 
 	}
 }
