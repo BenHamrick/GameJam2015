@@ -19,10 +19,21 @@ public class spriteIsoSorting : MonoBehaviour {
         time += Time.deltaTime;
         if (time > .05f)
         {
-            if (layer != -(int)((collider2D.bounds.center.y - collider2D.bounds.extents.y) * 100f))
+            if (collider2D != null)
             {
-                layer = -(int)((collider2D.bounds.center.y - collider2D.bounds.extents.y) * 100f);
-                spriteRenderer.sortingOrder = layer;
+                if (layer != -(int)((collider2D.bounds.center.y - collider2D.bounds.extents.y) * 100f))
+                {
+                    layer = -(int)((collider2D.bounds.center.y - collider2D.bounds.extents.y) * 100f);
+                    spriteRenderer.sortingOrder = layer;
+                }
+            }
+            else
+            {
+                if (layer != -(int)(transform.position.y * 100f))
+                {
+                    layer = -(int)((transform.position.y) * 100f);
+                    spriteRenderer.sortingOrder = layer;
+                }
             }
         }
 	}
