@@ -36,11 +36,11 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-		negativeXPlayer = CharacterController.instance[0].transform.position;
-        positiveXPlayer = CharacterController.instance[0].transform.position;
-        negativeYPlayer = CharacterController.instance[0].transform.position;
-        positiveYPlayer = CharacterController.instance[0].transform.position;
+
+        negativeXPlayer = CharacterController.instancePrivate[0].transform.position;
+        positiveXPlayer = CharacterController.instancePrivate[0].transform.position;
+        negativeYPlayer = CharacterController.instancePrivate[0].transform.position;
+        positiveYPlayer = CharacterController.instancePrivate[0].transform.position;
 
 		for(int i = 0; i < CharacterController.instance.Length; i += 1){
             if (CharacterController.instance[i] != null)
