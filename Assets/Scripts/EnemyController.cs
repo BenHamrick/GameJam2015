@@ -10,6 +10,8 @@ public class EnemyController : MonoBehaviour {
 
     public GameObject moneyObject;
 
+    public GameObject dethObject;
+
     bool didGetHit;
 
     public float health;
@@ -55,6 +57,8 @@ public class EnemyController : MonoBehaviour {
                 GameObject moneyGameObject = (GameObject)Instantiate(moneyObject, transform.position, Quaternion.identity);
                 moneyGameObject.rigidbody2D.AddForce(Random.insideUnitCircle * 2000f);
             }
+            GameObject dethGameObject = (GameObject)Instantiate(dethObject, transform.position, Quaternion.identity);
+            dethGameObject.transform.localScale = transform.localScale;
 			Stats.instance.EnemyKilled(island);
             Destroy(gameObject);
         }
