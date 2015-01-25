@@ -6,9 +6,8 @@ using UnityEngine.UI;
 public class CharacterController : MonoBehaviour {
 
 	public static int playerCounter;
+    static CharacterController[] instancePrivate;
 	public static CharacterController[] instance;
-
-    public Slider healthSlider;
 
     public GameObject bullet;
 
@@ -44,10 +43,13 @@ public class CharacterController : MonoBehaviour {
 
     float xScale;
 
+    int controllerAmount = 0;
+
 	void Awake(){
         xScale = transform.localScale.x;
 
 		if (instance == null) {
+            instancePrivate = new CharacterController[4];
 			instance = new CharacterController[4];
 			playerCounter = 0;
 		}
@@ -57,6 +59,7 @@ public class CharacterController : MonoBehaviour {
 
 		playerIndex = playerCounter;
 
+        instancePrivate[playerCounter] = this;
 		instance [playerCounter] = this;
 
 		aimDirection = Vector2.zero;
@@ -67,7 +70,32 @@ public class CharacterController : MonoBehaviour {
         renderer.receiveShadows = true;
 	}
 
+    void OnEnable()
+    {
+        if (instance[playerIndex] == null)
+            transform.position = new Vector2(Camera.main.transform.position.x, Camera.main.transform.position.y);
+        instance[playerIndex] = this;
+    }
+
+    void OnDisable()
+    {
+        instance[playerIndex] = null;
+    }
+
 	void Update(){
+        if (controllerAmount != InputManager.Devices.Count)
+        {
+            controllerAmount = InputManager.Devices.Count;
+            for (int i = 0; i < InputManager.Devices.Count; i++)
+            {
+                instancePrivate[i].gameObject.SetActive(true);
+            }
+            for (int i = InputManager.Devices.Count; i < 4; i++)
+            {
+                instancePrivate[i].gameObject.SetActive(false);
+            }
+
+        }
 
 		time -= Time.deltaTime;
         if (InputManager.Devices.Count > playerIndex)
@@ -175,7 +203,6 @@ public class CharacterController : MonoBehaviour {
 		PerlinShake.instance.PlayShake (shakeDuration, shakeSpeed, shakeMagnitude);
 
 		health -= damage;
-        healthSlider.value = (float)health / 100f;
 		if (health > 0) {
 			tempMoneyLoss = (int)(money * moneyPercentage);
 			
