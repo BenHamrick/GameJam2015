@@ -120,7 +120,7 @@ public class RoomController : MonoBehaviour {
 	}
 
 	private void CloseExitDoor(){
-		print ("Close Exit Door");
+		//print ("Close Exit Door");
 		doorExit.SetActive (true);
 		doorExitBeam.SetActive (true);
 
@@ -129,7 +129,7 @@ public class RoomController : MonoBehaviour {
 
 	public void OpenExitDoor(){
 		if (!challengeComplete) {
-			print ("Open Exit Door");
+			//print ("Open Exit Door");
 			challengeComplete = true;
 			doorExit.SetActive (false);
 			doorExitBeam.SetActive (false);		
