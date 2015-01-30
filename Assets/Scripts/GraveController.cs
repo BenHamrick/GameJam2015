@@ -30,7 +30,6 @@ public class GraveController : MonoBehaviour {
             {
                 CharacterController.instancePrivate[i].gameObject.SetActive(true);
             }
-            Application.LoadLevel("test"); 
         }
 	}
 	
@@ -86,7 +85,7 @@ public class GraveController : MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.GetComponent<CharacterController>() != null && playerDoingReviving != null && other.GetComponent<CharacterController>() != playerToRevive)
+        if (other.GetComponent<CharacterController>() != null && playerDoingReviving == other.GetComponent<CharacterController>() && other.GetComponent<CharacterController>() != playerToRevive)
         {
             playerDoingReviving = null;
         }

@@ -4,8 +4,7 @@ using UnityEngine;
 using InControl;
 
 
-namespace CustomProfileExample
-{
+
 	// This custom profile is enabled by adding it to the Custom Profiles list
 	// on the InControlManager component, or you can attach it yourself like so:
 	// InputManager.AttachDevice( new UnityInputDevice( "KeyboardAndMouseProfile" ) );
@@ -124,5 +123,4 @@ namespace CustomProfileExample
 			};
 		}
 	}
-}
 

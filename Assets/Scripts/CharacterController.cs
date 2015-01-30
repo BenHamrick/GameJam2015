@@ -52,9 +52,17 @@ public class CharacterController : MonoBehaviour {
 
     SpriteRenderer sprtieRenderer;
 
-    public GameObject grave; 
+    public GameObject grave;
+
+    bool isKeyboard = false;
 
 	void Awake(){
+        if (InputManager.Devices.Count == 0)
+        {
+            InputManager.AttachDevice(new UnityInputDevice(new KeyboardAndMouseProfile()));
+            isKeyboard = true;
+        }
+
         sprtieRenderer = GetComponent<SpriteRenderer>();
         xScale = transform.localScale.x;
 
@@ -120,17 +128,15 @@ public class CharacterController : MonoBehaviour {
         }
 
 		time -= Time.deltaTime;
-        if (InputManager.Devices.Count > playerIndex)
-        {
-            Move();
 
-            Aim();
+        Move();
+
+        Aim();
 
 
-            Shoot();
+        Shoot();
 
-            Animate();
-        }
+        Animate();
 	}
 
     void Animate()
@@ -181,10 +187,19 @@ public class CharacterController : MonoBehaviour {
 
 
 	private void Aim(){
-        if (InputManager.Devices[playerIndex].RightStick != Vector2.zero)
-            aimDirection = InputManager.Devices[playerIndex].RightStick;
-        else if(moveDirection != Vector2.zero)
-            aimDirection = moveDirection;
+        if (isKeyboard)
+        {
+            Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) -transform.position;
+            print("fdsa");
+            aimDirection = direction;
+        }
+        else
+        {
+            if (InputManager.Devices[playerIndex].RightStick != Vector2.zero)
+                aimDirection = InputManager.Devices[playerIndex].RightStick;
+            else if (moveDirection != Vector2.zero)
+                aimDirection = moveDirection;
+        }
 	}
 
 	private void Move(){
@@ -202,7 +217,7 @@ public class CharacterController : MonoBehaviour {
 	}
 
 	private void Shoot(){
-		if(InputManager.Devices [playerIndex].RightTrigger){
+		if(InputManager.Devices [playerIndex].RightTrigger || (isKeyboard && Input.GetMouseButton(0))){
 			if(time < 0){
                 if (shotGun)
                     time = rateOfFire * 2f;
